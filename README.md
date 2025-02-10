@@ -85,8 +85,8 @@
 
         <div class="section">
             <h2>Presentations</h2>
-            <div class="presentation" onclick="window.open('https://youtube.com/watch?v=example', '_blank');">
-                <iframe class="thumbnail" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+            <div class="presentation" onclick="window.open('https://youtube.com/NugQOMaJuuw?v=example', '_blank');">
+                <iframe class="thumbnail" src="https://www.youtube.com/embed/NugQOMaJuuw" frameborder="0" allowfullscreen></iframe>
                 <p><strong>Title of Presentation</strong><br>Conference Name, Year</p>
             </div>
         </div>
