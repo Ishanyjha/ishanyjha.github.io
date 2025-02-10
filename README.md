@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -77,17 +77,17 @@
 
         <div class="section">
             <h2>Recent Publications</h2>
-            <div class="publication" onmouseover="this.style.transform='scale(1.03)';" onmouseout="this.style.transform='scale(1)';">
-                <img class="thumbnail" src="snip.jpg" alt="Paper">
-                <p><strong>AI-Powered VR Simulations for Semiconductor Industry Training and Education</strong><br>Journal of Advanced Technological Education, 2024</p>
+            <div class="publication" onclick="window.open('https://example.com/paper', '_blank');">
+                <img class="thumbnail" src="paper-thumbnail.jpg" alt="Paper">
+                <p><strong>Title of Paper</strong><br>Journal Name, Year</p>
             </div>
         </div>
 
         <div class="section">
             <h2>Presentations</h2>
-            <div class="presentation" onclick="window.open('[https://youtube.com/watch?v=example', '_blank'](https://www.youtube.com/watch?v=NugQOMaJuuw&t=7s));">
-                <img class="thumbnail" src="presentation-thumbnail.jpg" alt="Presentation">
-                <p><strong> Empowering Students Through AI Clubs</strong><br>Student AI Convening, Orange County Dept. of Education, 2024</p>
+            <div class="presentation" onclick="window.open('https://youtube.com/watch?v=example', '_blank');">
+                <iframe class="thumbnail" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+                <p><strong>Title of Presentation</strong><br>Conference Name, Year</p>
             </div>
         </div>
     </div>
