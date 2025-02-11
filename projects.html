@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Samuel Yuan</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <a href="index.html" class="nav-title" style="text-decoration: none;">Samuel Yuan</a>
+                <div class="nav-links">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <!-- <a href="assets/Main_e5905a25-9683-46d6-865c-aaed7ef06243_720x.png" target="_blank" class="nav-link">CV</a> -->
+                    <a href="https://scholar.google.com/citations?user=8RGyM2cAAAAJ&hl=en" target="_blank" class="nav-link">Google Scholar</a>
+                    <a href="https://github.com/sdkyuanpanda" target="_blank" class="nav-link">GitHub</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner_2">
+            <img src="assets/Main_e5905a25-9683-46d6-865c-aaed7ef06243_720x.png" alt="Banner">
+        </div>
+
+        <!-- Project Introduction -->
+        <p>I've worked on a couple projects in the past — most of them have to do with physics. Here's a brief summary below:</p>
+
+
+        <p style="color: #005A92; font-weight: 700; margin-top: 1em; margin-bottom: -0.5em">Contents:</p>
+        <!-- TODO: Make this a table of contents with red bold numbers and centered and more linespacing-->
+        <ol style="margin-bottom: 2em;">
+            <li><a href="#superdiff" class="inline-link">SuperDiff: Conditional Diffusion Models for Superconductor Discovery</a></li>
+            <li><a href="#asteroid" class="inline-link">Orbit Determination of Mars-Crossing Asteroid 699 Hela</a></li>
+            <li><a href="#firebreak" class="inline-link">Wildfire Firebreak Placement Optimization Genetic Algorithm</a></li>
+        </ol>
+
+        <!-- Projects Section -->
+        <div class="project-listing" id="superdiff">
+            <h2>SuperDiff</h2>
+
+            <p>In this project, I applied diffusion models — a type of generative AI model that is behind popular image generators such as Dall-E 2 and Stable Diffusion — for superconductor discovery. In particular, this work focused on applying conditional diffusion models (with <a href="https://arxiv.org/abs/2108.02938" target="_blank" class="inline-link">ILVR</a>) to computationally discovery potential <i>new families</i> of superconductors for the first time. In the past, computational approaches to superconductor discovery could only generate new superconductors from known families and were unable to generate any new families — this work resolves that limitation.</p>
+
+            <img src="assets/290336961-fdf28dd9-4fdc-406b-bd3e-d4d67932ddc8.png" 
+                alt="Diffusion Process Illustration" 
+                class="centered-image">       
+
+
+            <p>Beyond generating new families of hypothetical superconductors for the first time, this model also enables researchers to extrapolate a family of potential superconductors from any single new one they discovery. The model is a powerful tool for accelerating superconductor discovery. I conducted this research with Prof. Dordevic (UAkron), who kindly accepted to mentor me on this project after I cold-emailed him.</p>
+
+            <div class="in-paragraph-publications">
+                <p><b>This work was published as:</b></p>
+                <p><span style="color: #ff1423; font-weight: bold">Yuan, S.</span>, Dordevic, S.V. Diffusion models for conditional generation of hypothetical new families of superconductors. <i>Sci Rep</i> <b>14</b>, 10275 (2024). <a href="https://doi.org/10.1038/s41598-024-61040-3" target="_blank" class="inline-link-pure-url">https://doi.org/10.1038/s41598-024-61040-3</a></p>
+            </div>
+
+            <p><b>Additional Details.</b> For this work, I was named a <a href="https://www.davidsongifted.org/gifted-programs/fellows-scholarship/fellows/current-and-past-fellows/2024-fellows/2024-davidson-fellows-laureate-samuel-yuan/" target="_blank" class="inline-link">2024 Davidson Fellow Laureate ($50k scholarship)</a> and a Regeneron Science Talent Search (STS) Semifinalist. This work will also be featured in an oral presentation at the 2025 APS Global Physics Summit.</p>
+        </div>
+
+        <div class="project-listing" id="asteroid">
+            <h2>Asteroid Orbit Determination</h2>
+            <div style="display: flex; align-items: start; gap: 1rem">
+                <div style="flex: 0.7;">
+                    <p>As part of the Summer Science Program (SSP) in astrophysics, I worked on a project on determining the orbit of mars-crossing asteroid 699 Hela (aka A910 LC) together with two other teammates. We observed the asteroid over several weeks with the telescope at the Sommers-Bausch Observatory at CU Boulder and used this data to determine the orbital elements. </p>
+                </div>
+                <div style="flex: 0.3;">
+                    <img src="assets/ssp-logo-image.png" alt="SSP Logo" style="width: 100%; height: auto;"/>
+                </div>
+            </div>
+            <p style="margin-top: 0">After collecting the observational data, we employed the Method of Gauss (MoG) to determine the orbital elements of the asteroid from three best observations. After computing the orbital elements, we ran Monte Carlo simulations to determine uncertainties and propogated the elements forward millions of years to predict the future of the asteroid.</p>
+            
+            <img src="assets/od-arch-image.png" 
+                alt="Orbital Determination Process Schematic" 
+                class="centered-image"
+            >
+
+            <p>At SSP, beyond the OD project, I worked on weekly problem sets with friends and played a lot of ping pong! The code for my OD project can be found <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024" target="_blank" class="inline-link">here</a>.</p>
+
+            <img src="assets/orbits-image.png" 
+                alt="Orbit of Asteroid 699 Hela" 
+                class="centered-image"
+                style="width: 35%;">
+
+            <div class="in-paragraph-publications">
+                <p><b>You can read our final report at:</b></p>
+                <p>M Judkins-Cooper*, N Marabito*, <span style="color: #ff1423; font-weight:bold;">S Yuan*</span>. Orbit Determination of Mars-Crossing Asteroid 699 Hela. SSP (2024). <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/main/ssp_team08_final_report-1.pdf" target="_blank" class="inline-link-pure-url">https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/main/ssp_team08_final_report-1.pdf</a></p>
+            </div>
+        </div>
+
+        <div class="project-listing" id="firebreak">
+            <h2>Firebreak Placement Optimization</h2>
+
+            <p>Together with my friend Armaan Gomes, I worked on a science fair project on firebreak placement optimization with genetic algorithms in sophomore year of high school. In this work, we built a cellular-automata based wildfire simulation with the Alexandridis model that was integrated with real-world data. And, with this, we applied genetic algorithms to compute realistic and effective firebreak constructions.</p>
+
+            <img src="assets/wildfiresimulation.jpg" 
+                alt="Firebreak Placement Optimization at work - Computed Firebreak" 
+                class="centered-image"
+                style="width: 50%;"
+            >
+
+            <p>While a prototype model, our work presents a possible new method for efficient and effective firebreak construction strategy conceptualization — and further development, such as with the integration of additional data, may produce a truly useful real-time assistive tool for wildfire-fighting efforts. The code for this work is publicly accessible and can be found <a href="https://github.com/arghunter/FlamProtect" target="_blank" class="inline-link">here</a>.</p>
+
+            <p><b>Additional Details.</b> This work won First Place in the Computer Science category at the 2023 California Science and Engineering Fair (CSEF).</p>
+
+        </div>
+        
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer_bold">Copyright &copy; 2025 Samuel Yuan. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
