@@ -12,8 +12,8 @@
                 <div class="nav-links">
                     <a href="projects.html" class="nav-link">Projects</a>
                     <!-- <a href="assets/Main_e5905a25-9683-46d6-865c-aaed7ef06243_720x.png" target="_blank" class="nav-link">CV</a> -->
-                    <a href="https://scholar.google.com/citations?user=8RGyM2cAAAAJ&hl=en" target="_blank" class="nav-link">Google Scholar</a>
-                    <a href="https://github.com/sdkyuanpanda" target="_blank" class="nav-link">GitHub</a>
+                    <a href="example.com" target="_blank" class="nav-link">Google Scholar</a>
+                    <a href="example.com" target="_blank" class="nav-link">GitHub</a>
                 </div>
             </div>
         </nav>
@@ -35,8 +35,8 @@
 
         <!-- Social Links
         <p>
-            <a href="https://scholar.google.com/citations?user=8RGyM2cAAAAJ&hl=en" class="arrow-link">Google Scholar</a>
-            <a href="https://github.com/sdkyuanpanda" class="arrow-link">GitHub</a>
+            <a href="example.com" class="arrow-link">Google Scholar</a>
+            <a href="example.com" class="arrow-link">GitHub</a>
         </p> -->
 
         <!-- Publications Section -->
