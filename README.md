@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles.css">
-        <title>Samuel Yuan</title>
+        <title>Ishan Jha</title>
     </head>
     <body>
         <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="navbar-content">
-                <a href="index.html" class="nav-title" style="text-decoration: none;">Samuel Yuan</a>
+                <a href="index.html" class="nav-title" style="text-decoration: none;">Ishan Jha</a>
                 <div class="nav-links">
                     <a href="projects.html" class="nav-link">Projects</a>
                     <!-- <a href="assets/Main_e5905a25-9683-46d6-865c-aaed7ef06243_720x.png" target="_blank" class="nav-link">CV</a> -->
@@ -24,14 +24,14 @@
         </div>
 
         <!-- Header
-        <h1>Samuel Yuan</h1> -->
+        <h1>Ishan Jha</h1> -->
 
         <!-- Introduction -->
-        <p>Hi! I'm currently a student at Homestead High School in Cupertino, CA.</p>
+        <p>Greetings, I am a ninth grader at Troy High School in Fullerton California.</p>
 
-        <p>I enjoy solving problems in physics. Right now, I'm working on applying diffusion models for superconductor discovery and getting deep learning models to explore out-of-distribution. In the past, I've worked on other <a href="projects.html" class="inline-link">projects</a> on firebreak placement optimization and asteroid orbit determination.</p>
+        <p>My pasions are theoretical mathematics, artificial intelligence, and its applications. Within mathematics, my interests are in topology and differential geometry. I also enjoy studying the applications of these ideas in machine learning, and the applications of machine learning in industry.</p>
 
-        <p class="bottom_extra_space">In my free time, I stargaze, hike, and do graphic design! Here's a cool <a href="assets/sbo_eagle_1_240.png" target="_blank" class="inline-link">photo</a> of the Eagle Nebula I took at the Sommers-Bausch Observatory! My favorite animal is the panda bear :)</p>
+        <p class="bottom_extra_space">Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI.</p>
 
         <!-- Social Links
         <p>
@@ -42,6 +42,17 @@
         <!-- Publications Section -->
         <h2>Publications</h2>
         <ul class="publications">
+            <li>
+                <div><span style="font-weight: 600;">Diffusion Models for Conditional Generation of Hypothetical New Families of Superconductors</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">S Yuan</span>, SV Dordevic</div>
+                <div><i>Scientific Reports</i></div>
+                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div>
+                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
+                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">arXiv</a>
+                    <a href="https://github.com/sdkyuanpanda/SuperDiff" target="_blank" class="arrow-link">code</a>
+                </div>
+            </li>
             <li>
                 <div><span style="font-weight: 600;">Diffusion Models for Conditional Generation of Hypothetical New Families of Superconductors</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">S Yuan</span>, SV Dordevic</div>
