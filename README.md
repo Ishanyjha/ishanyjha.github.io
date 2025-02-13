@@ -15,6 +15,7 @@ hi
         }
 
         body {
+            width: 2400px;
             background-color: #f5f5f5;
             display: flex;
             justify-content: center;
