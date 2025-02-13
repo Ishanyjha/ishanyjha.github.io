@@ -93,7 +93,7 @@
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
-            max-width: 900px;
+            max-width: 2400px;
         }
 
         /* Slideshow */
