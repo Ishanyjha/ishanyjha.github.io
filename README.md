@@ -84,6 +84,53 @@
             </li>
         </ul>
 
+  <!-- presenting Section -->
+        <h2>Presentations</h2>
+        <h6>*denotes equal contribution</h6>
+        <ul class="presentations">
+            <li>
+                <div><span style="font-weight: 600;">Example</span></div>
+                <div>Empowering Students Through AI Clubs, <span style="color: #ff1423; font-weight:bold;">Orange County Department of Education - Student AI Summit</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">I. Jha</span></div>
+                <div></div>
+                <div><span style="color:#005A92;">Example N, Example</span></div>
+                <div>
+                    <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/ssp_team08_final_report-1.pdf" target="_blank" class="arrow-link">video</a>
+                    <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/od/ssp_team08_orbital_integration_project_slides.pdf" target="_blank" class="arrow-link">slides</a>
+                </div>
+            </li>
+            <li>
+                <div><span style="font-weight: 600;">Example</span></div>
+                <div>Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom, <span style="color: #ff1423; font-weight:bold;">California Institute of Technology</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">I. Jha</span></div>
+                <div></div>
+                <div><span style="color:#005A92;">Example N, Example</span></div>
+                <div>
+                    <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/ssp_team08_final_report-1.pdf" target="_blank" class="arrow-link">poster</a>
+                </div>
+            </li>
+            <li>
+                <div><span style="font-weight: 600;">Example</span></div>
+                <div>Digital Twins for Semiconductor Fabrication Education, <span style="color: #ff1423; font-weight:bold;">TechConnect World Innovation Conference (poster & panel)</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">I. Jha</span></div>
+                <div></div>
+                <div><span style="color:#005A92;">Example N, Example</span></div>
+                <div>
+                    <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/ssp_team08_final_report-1.pdf" target="_blank" class="arrow-link">poster</a>
+                </div>
+            </li>
+            <li>
+                <div><span style="font-weight: 600;">Example</span></div>
+                <div>AI For Education and Training., <span style="color: #ff1423; font-weight:bold;">OCDE, OCPathways Future Leaders AI Conference</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">I. Jha</span></div>
+                <div></div>
+                <div><span style="color:#005A92;">Example N, Example</span></div>
+                <div>
+                    <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/ssp_team08_final_report-1.pdf" target="_blank" class="arrow-link">slides</a>
+                </div>
+            </li>
+        </ul>
+
         <!-- Contacts Section -->
         <p style="margin-bottom: 0;">If you have questions about my work or if you'd just like to chat, please feel free to reach out at:</p>
         <p class="bottom_extra_space" style="margin-top: 0;">sdkyuan [at] gmail [dot] com </p>
