@@ -120,172 +120,170 @@
         <!-- Contacts Section -->
         <p style="margin-bottom: 0;">If you have questions about my work or if you'd just like to chat, please feel free to reach out at:</p>
         <p class="bottom_extra_space" style="margin-top: 0;">ishanyjha [at] gmail [dot] com </p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slideshow</title>
-    <style>
-        * {box-sizing: border-box;}
-        body {font-family: Arial, sans-serif; margin: 0;}
-        .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-        }
-        .mySlides {
-            display: none;
-            position: relative;
-        }
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .numbertext {
-            position: absolute;
-            top: 8px;
-            left: 16px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px;
-            border-radius: 5px;
-        }
-        .text {
-            position: absolute;
-            bottom: 8px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 8px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 10px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-            border-radius: 5px;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .dots-container {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .dot {
-            cursor: pointer;
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-    </style>
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slideshow</title>
+<style>
+    * {box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; margin: 0;}
+    .slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+    }
+    .mySlides {
+        display: none;
+        position: relative;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .numbertext {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .text {
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 10px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.3s;
+        border-radius: 5px;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dots-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+</style>
 </head>
 <body>
 
 <!-- Slideshow container -->
 <div class="slideshow-container">
-  
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 5</div>
-        <img src="IMG_5966.jpeg" alt="TechConnect">
-        <div class="text">At TechConnect in D.C</div>
-    </div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">2 / 5</div>
-        <img src="IMG_5727.jpeg" alt="White House">
-        <div class="text">At the White House</div>
-    </div>
+<div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="IMG_5966.jpeg" alt="TechConnect">
+    <div class="text">At TechConnect in D.C</div>
+</div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 5</div>
-        <img src="IMG_8374.jpeg" alt="Roundtable">
-        <div class="text">At a roundtable in the White House</div>
-    </div>
+<div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="IMG_5727.jpeg" alt="White House">
+    <div class="text">At the White House</div>
+</div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">4 / 5</div>
-        <img src="IMG_6057.jpeg" alt="TechConnect Panel">
-        <div class="text">Panel presentation at TechConnect</div>
-    </div>
+<div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="IMG_8374.jpeg" alt="Roundtable">
+    <div class="text">At a roundtable in the White House</div>
+</div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">5 / 5</div>
-        <img src="E3231034-F003-4FF5-B3D8-FDAE3931089D.jpeg" alt="Caltech">
-        <div class="text">At Caltech</div>
-    </div>
+<div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="IMG_6057.jpeg" alt="TechConnect Panel">
+    <div class="text">Panel presentation at TechConnect</div>
+</div>
 
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="E3231034-F003-4FF5-B3D8-FDAE3931089D.jpeg" alt="Caltech">
+    <div class="text">At Caltech</div>
+</div>
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
 
 <!-- The dots/circles -->
 <div class="dots-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
 </div>
 
 <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
 </script>
 
-</body>
-</html>
 
         <!-- Footer -->
         <footer>
