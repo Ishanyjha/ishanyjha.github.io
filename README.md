@@ -43,10 +43,10 @@
         <h2>Publications</h2>
         <ul class="publications">
             <li>
-                <div><span style="font-weight: 600;">Diffusion Models for Conditional Generation of Hypothetical New Families of Superconductors</span></div>
+                <div><span style="font-weight: 600;">AI-Powered VR Simulations for Semiconductor Industry Training and Education</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">S Yuan</span>, SV Dordevic</div>
-                <div><i>Scientific Reports</i></div>
-                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div><i>Journal of Advanced Technological Education</i></div>
+                <div><span style="color:#005A92;">Accepted November 27, 2024</span></div>
                 <div>
                     <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
                     <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">arXiv</a>
@@ -54,10 +54,10 @@
                 </div>
             </li>
             <li>
-                <div><span style="font-weight: 600;">Diffusion Models for Conditional Generation of Hypothetical New Families of Superconductors</span></div>
+                <div><span style="font-weight: 600;">Example</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">S Yuan</span>, SV Dordevic</div>
-                <div><i>Scientific Reports</i></div>
-                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div><i>Example</i></div>
+                <div><span style="color:#005A92;">Example N, Example</span></div>
                 <div>
                     <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
                     <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">arXiv</a>
@@ -67,14 +67,14 @@
         </ul>
 
         <!-- Preprints Section -->
-        <h2>Preprints</h2>
+        <h2>Preprints and Reports</h2>
         <h6>*denotes equal contribution</h6>
         <ul class="publications">
             <li>
-                <div><span style="font-weight: 600;">Orbit Determination of Mars-Crossing Asteroid 699 Hela</span></div>
-                <div>M Judkins-Cooper*, N Marabito*, <span style="color: #ff1423; font-weight:bold;">S Yuan*</span></div>
-                <div>SSP Final Report</div>
-                <div><span style="color:#005A92;">July 16, 2024</span></div>
+                <div><span style="font-weight: 600;">Example</span></div>
+                <div>Example, <span style="color: #ff1423; font-weight:bold;">Example*</span></div>
+                <div>Example</div>
+                <div><span style="color:#005A92;">Example N, Example</span></div>
                 <div>
                     <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/ssp_team08_final_report-1.pdf" target="_blank" class="arrow-link">paper</a>
                     <a href="https://github.com/sdkyuanpanda/SSP-CUB-2024/blob/b5678afb9f23b7d1544910b107fa32d53cd66db2/od/ssp_team08_orbital_integration_project_slides.pdf" target="_blank" class="arrow-link">slides</a>
