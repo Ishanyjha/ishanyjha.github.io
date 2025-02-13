@@ -119,6 +119,7 @@ hi
 
     <div class="container">
         <!-- Navigation Bar -->
+        <center>
         <nav class="navbar">
             <a href="index.html" class="nav-title">Ishan Jha</a>
             <div class="nav-links">
@@ -127,6 +128,7 @@ hi
                 <a href="example.com" target="_blank">GitHub</a>
             </div>
         </nav>
+        </center>
 
         <!-- Introduction -->
         <section>
