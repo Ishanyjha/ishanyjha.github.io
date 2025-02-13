@@ -176,13 +176,13 @@
             <h2><center>Publications</center></h2>
             <ul class="publications">
                 <li>
-                <div><span style="font-weight: 600;">Title</span></div>
-                <div><span style="color: #ff1423; font-weight:bold;">I Jha</span>, Others</div>
+                <div><span style="font-weight: 600;">AI-Powered VR Simulations for Semiconductor Industry Training and Education</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">I. Jha</span>, G. Codina, A. Dong, K. Hong, A. Rodriguez, F. Chen, J. Zhu, G.P Li</div>
                 <div><i>Journal of Advanced Technological Education</i></div>
-                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div><span style="color:#005A92;">Accepted November 27, 2024</span></div>
                 <div>
                     <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
-                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">video demo</a>
+                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" class="arrow-link">video demo</a>
                 </div>
                 </li>
             </ul>
@@ -198,7 +198,7 @@
                 <div><span style="color:#005A92;">May 4, 2024</span></div>
                 <div>
                     <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
-                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">video demo</a>
+                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" class="arrow-link">video demo</a>
                 </div>
                 </li>
             </ul>
