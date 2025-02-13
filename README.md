@@ -1,4 +1,4 @@
-hi
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -151,7 +151,7 @@ hi
 
     <div class="container">
         <!-- Navigation Bar -->
-/* Navigation Bar */
+
 
 
         <nav class="navbar">
@@ -166,7 +166,7 @@ hi
 
         <!-- Introduction -->
         <section>
-            <h1>Welcome!</h1>
+            <h1><center>Welcome!</center></h1>
             <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
             <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within mathematics, my interests include topology and differential geometry. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
             <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI.</p>
@@ -174,7 +174,7 @@ hi
 
         <!-- Publications Section -->
         <section>
-            <h2>Publications</h2>
+            <h2><center>Publications</center></h2>
             <ul class="publications">
                 <li>
                     <strong>AI-Powered VR Simulations for Semiconductor Industry Training and Education</strong><br>
@@ -189,7 +189,7 @@ hi
 
         <!-- Slideshow -->
         <section>
-            <h2>Gallery</h2>
+            <h2><center>Gallery</center></h2>
             <div class="slideshow-container">
                 <div class="mySlides fade">
                     <img src="IMG_5966.jpeg" alt="TechConnect">
