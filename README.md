@@ -133,12 +133,23 @@
     position: relative;
     max-width: 1000px;
     margin: auto;
+    overflow: hidden;
   }
   .mySlides {
     display: none;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    animation: fadeSlide 1s ease-in-out;
   }
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes fadeSlide {
+    from {opacity: 0; transform: translateX(100%);}
+    to {opacity: 1; transform: translateX(0);}
   }
   .text {
     position: absolute;
@@ -186,27 +197,22 @@
 
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <div class="numbertext">1 / 5</div>
     <img src="IMG_5966.jpeg">
     <div class="text">At TechConnect in D.C</div>
   </div>
   <div class="mySlides fade">
-    <div class="numbertext">2 / 5</div>
     <img src="IMG_5727.jpeg">
     <div class="text">At the White House</div>
   </div>
   <div class="mySlides fade">
-    <div class="numbertext">3 / 5</div>
     <img src="IMG_8374.jpeg">
     <div class="text">At a roundtable in the White House</div>
   </div>
   <div class="mySlides fade">
-    <div class="numbertext">4 / 5</div>
     <img src="IMG_6057.jpeg">
     <div class="text">Panel presentation at TechConnect</div>
   </div>
   <div class="mySlides fade">
-    <div class="numbertext">5 / 5</div>
     <img src="E3231034-F003-4FF5-B3D8-FDAE3931089D.jpeg">
     <div class="text">At Caltech</div>
   </div>
@@ -251,6 +257,7 @@
 
 </body>
 </html>
+
 
 
         <!-- Footer -->
