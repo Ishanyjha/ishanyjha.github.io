@@ -121,12 +121,9 @@
         <p style="margin-bottom: 0;">If you have questions about my work or if you'd just like to chat, please feel free to reach out at:</p>
         <p class="bottom_extra_space" style="margin-top: 0;">ishanyjha [at] gmail [dot] com </p>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Slideshow</title>
+
+
+<title>Photos</title>
 <style>
   * {box-sizing: border-box;}
   .slideshow-container {
@@ -254,11 +251,6 @@
     dots[slideIndex-1].className += " active";
   }
 </script>
-
-</body>
-</html>
-
-
 
         <!-- Footer -->
         <footer>
