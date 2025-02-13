@@ -20,16 +20,16 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         /* Centered Container */
         .container {
             background: white;
-            width: 80%;
-            max-width: 1000px;
-            padding: 30px;
-            border-radius: 10px;
+            width: 85%;
+            max-width: 1100px;
+            padding: 40px;
+            border-radius: 12px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -42,6 +42,7 @@
             background: #333;
             padding: 15px 20px;
             border-radius: 10px;
+            margin-bottom: 40px;
         }
 
         .nav-title {
@@ -58,27 +59,26 @@
             font-size: 16px;
         }
 
-        .nav-links
+        .nav-links a:hover {
             text-decoration: underline;
         }
 
-        /* Banner */
-        .banner_1 img {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 10px;
-            margin-top: 20px;
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
         }
 
-        /* Content Styling */
         h1, h2 {
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
-            line-height: 1.6;
-            margin: 15px 0;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         ul {
@@ -88,18 +88,19 @@
 
         .publications li {
             background: #fafafa;
-            padding: 15px;
-            margin: 10px 0;
+            padding: 20px;
+            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
+            max-width: 900px;
         }
 
         /* Slideshow */
         .slideshow-container {
             position: relative;
-            max-width: 100%;
-            margin: 30px auto;
+            max-width: 900px;
+            margin: 40px auto;
         }
 
         .mySlides {
@@ -116,7 +117,7 @@
             position: absolute;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
+            padding: 8px 12px;
             border-radius: 5px;
         }
 
@@ -136,7 +137,7 @@
             position: absolute;
             top: 50%;
             padding: 10px;
-            font-size: 18px;
+            font-size: 20px;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
@@ -153,14 +154,14 @@
 
         .dots-container {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .dot {
             cursor: pointer;
             height: 12px;
             width: 12px;
-            margin: 0 5px;
+            margin: 0 6px;
             background-color: #bbb;
             border-radius: 50%;
             display: inline-block;
@@ -173,7 +174,7 @@
 
         /* Footer */
         footer {
-            margin-top: 40px;
+            margin-top: 50px;
             padding: 20px;
             background: #333;
             color: white;
@@ -195,62 +196,50 @@
             </div>
         </nav>
 
-        <!-- Banner -->
-        <div class="banner_1">
-            <img src="image.jpg" alt="Banner">
-        </div>
-
         <!-- Introduction -->
-        <h1>Welcome!</h1>
-        <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
-        <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within mathematics, my interests include topology and differential geometry. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
-        <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI.</p>
+        <section>
+            <h1>Welcome!</h1>
+            <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
+            <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within mathematics, my interests include topology and differential geometry. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
+            <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI.</p>
+        </section>
 
         <!-- Publications Section -->
-        <h2>Publications</h2>
-        <ul class="publications">
-            <li>
-                <strong>AI-Powered VR Simulations for Semiconductor Industry Training and Education</strong><br>
-                <span style="color: #ff1423;">I. Jha</span>, G. Codina, A. Dong, A. Rodriguez, F. Chen, J. Zhu, K. Hong<br>
-                <em>Journal of Advanced Technological Education</em><br>
-                Accepted November 27, 2024<br>
-                <a href="paper-link" target="_blank">Paper</a> | 
-                <a href="video-link" target="_blank">Video Demo</a>
-            </li>
-        </ul>
-
-        <!-- Presentations Section -->
-        <h2>Presentations</h2>
-        <ul class="publications">
-            <li>
-                <strong>AI For Education and Training</strong><br>
-                <span style="color: #ff1423;">Ishan Jha</span><br>
-                <em>Orange County Dept. of Education Future Leaders AI Conference</em><br>
-                <a href="slides-link" target="_blank">Slides</a>
-            </li>
-        </ul>
+        <section>
+            <h2>Publications</h2>
+            <ul class="publications">
+                <li>
+                    <strong>AI-Powered VR Simulations for Semiconductor Industry Training and Education</strong><br>
+                    <span style="color: #ff1423;">I. Jha</span>, G. Codina, A. Dong, A. Rodriguez, F. Chen, J. Zhu, K. Hong<br>
+                    <em>Journal of Advanced Technological Education</em><br>
+                    Accepted November 27, 2024<br>
+                    <a href="paper-link" target="_blank">Paper</a> | 
+                    <a href="video-link" target="_blank">Video Demo</a>
+                </li>
+            </ul>
+        </section>
 
         <!-- Slideshow -->
-        <h2>Gallery</h2>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
-                <img src="IMG_5966.jpeg" alt="TechConnect">
-                <div class="text">At TechConnect in D.C</div>
+        <section>
+            <h2>Gallery</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="IMG_5966.jpeg" alt="TechConnect">
+                    <div class="text">At TechConnect in D.C</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_5727.jpeg" alt="White House">
+                    <div class="text">At the White House</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
-                <img src="IMG_5727.jpeg" alt="White House">
-                <div class="text">At the White House</div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
 
-        <div class="dots-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer>
