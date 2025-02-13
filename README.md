@@ -1,4 +1,4 @@
-
+hi
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,18 +20,17 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 50px 30px;
         }
 
-        /* Centered Container */
+        /* Wide Container */
         .container {
             background: white;
-            width: 85%;
-            max-width: 1100px;
-            padding: 40px;
+            width: 95%;
+            max-width: 2400px;
+            padding: 50px;
             border-radius: 12px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
         /* Navigation Bar */
@@ -40,13 +39,13 @@
             justify-content: space-between;
             align-items: center;
             background: #333;
-            padding: 15px 20px;
+            padding: 20px;
             border-radius: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .nav-title {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: white;
             text-decoration: none;
@@ -55,8 +54,8 @@
         .nav-links a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+            margin: 0 20px;
+            font-size: 18px;
         }
 
         .nav-links a:hover {
@@ -65,20 +64,18 @@
 
         /* Section Styling */
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         h1, h2 {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            max-width: 1200px;
         }
 
         ul {
@@ -88,18 +85,17 @@
 
         .publications li {
             background: #fafafa;
-            padding: 20px;
+            padding: 25px;
             margin: 20px auto;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            max-width: 2400px;
+            max-width: 1200px;
         }
 
         /* Slideshow */
         .slideshow-container {
             position: relative;
-            max-width: 900px;
+            max-width: 100%;
             margin: 40px auto;
         }
 
@@ -110,6 +106,8 @@
 
         .mySlides img {
             width: 100%;
+            max-height: 600px;
+            object-fit: cover;
             border-radius: 10px;
         }
 
@@ -122,22 +120,23 @@
         }
 
         .numbertext {
-            top: 8px;
-            left: 16px;
+            top: 10px;
+            left: 20px;
         }
 
         .text {
-            bottom: 8px;
+            bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
+            font-size: 20px;
         }
 
         .prev, .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
-            padding: 10px;
-            font-size: 20px;
+            padding: 12px;
+            font-size: 24px;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
@@ -145,8 +144,8 @@
             transform: translateY(-50%);
         }
 
-        .prev { left: 10px; }
-        .next { right: 10px; }
+        .prev { left: 20px; }
+        .next { right: 20px; }
 
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
@@ -154,14 +153,14 @@
 
         .dots-container {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .dot {
             cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 6px;
+            height: 14px;
+            width: 14px;
+            margin: 0 8px;
             background-color: #bbb;
             border-radius: 50%;
             display: inline-block;
@@ -174,12 +173,13 @@
 
         /* Footer */
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 60px;
+            padding: 25px;
             background: #333;
             color: white;
             font-weight: bold;
             border-radius: 10px;
+            text-align: center;
         }
     </style>
 </head>
