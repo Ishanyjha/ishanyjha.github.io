@@ -11,7 +11,7 @@
                 <a href="index.html" class="nav-title" style="text-decoration: none;">Ishan Jha</a>
                 <div class="nav-links">
                     <a href="projects.html" class="nav-link">Projects</a>
-                    <!-- <a href="assets/Main_e5905a25-9683-46d6-865c-aaed7ef06243_720x.png" target="_blank" class="nav-link">CV</a> -->
+                    <!-- <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/main/snip.JPG?raw=true" target="_blank" class="nav-link">CV</a> -->
                     <a href="example.com" target="_blank" class="nav-link">Google Scholar</a>
                     <a href="example.com" target="_blank" class="nav-link">GitHub</a>
                 </div>
@@ -20,7 +20,7 @@
 
         <!-- Banner -->
         <div class="banner_1">
-            <img src="assets/Main_e5905a25-9683-46d6-865c-aaed7ef06243_720x.png" alt="Banner">
+            <img src="image.jpg" alt="Banner">
         </div>
 
         <!-- Header
