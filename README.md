@@ -14,25 +14,6 @@ hi
             font-family: Arial, sans-serif;
         }
 
-        body {
-            width: 2400px;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 50px 30px;
-        }
-
-        /* Wide Container */
-        .container {
-            background: white;
-            width: 95%;
-            max-width: 2400px;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-        }
 
         /* Navigation Bar */
         .navbar {
