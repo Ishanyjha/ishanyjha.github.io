@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles.css">
@@ -49,22 +48,9 @@
                 <div><i>Journal of Advanced Technological Education</i></div>
                 <div><span style="color:#005A92;">Accepted November 27, 2024</span></div>
                 <div>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
-                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">arXiv</a>
-                    <a href="https://github.com/sdkyuanpanda/SuperDiff" target="_blank" class="arrow-link">code</a>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/cc91b88b509d26d686f32ebf886e378f5ed2b855/Final%20AI-Powered%20VR%20Simulations%20for%20Semiconductor%20Industry%20Training%20and%20Education_JP%20edited_12-3-24.docx%20(1).pdf" target="_blank" class="arrow-link">paper</a>
+                    <a href="https://youtu.be/Ri-jqU0WzQM" target="_blank" class="arrow-link">video demo (short)</a>
                 </div>
-            </li>
-            <li>
-                <div><span style="font-weight: 600;">Example</span></div>
-                <div><span style="color: #ff1423; font-weight:bold;">S Yuan</span>, SV Dordevic</div>
-                <div><i>Example</i></div>
-                <div><span style="color:#005A92;">Example N, Example</span></div>
-                <div>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
-                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">arXiv</a>
-                    <a href="https://github.com/sdkyuanpanda/SuperDiff" target="_blank" class="arrow-link">code</a>
-                </div>
-            </li>
         </ul>
 
         <!-- Preprints Section -->
@@ -105,7 +91,7 @@
                 <div><span style="color: #ff1423;">Poster and Panel Presentations, Gaylord National Hotel and Center</span></div>
                 <div><span style="color:#005A92;">MM DD, YYYY</span></div>
                 <div>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">poster</a>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/cc91b88b509d26d686f32ebf886e378f5ed2b855/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="arrow-link">poster</a>
                 </div>
             </li>
             <li>
@@ -115,7 +101,7 @@
                 <div><span style="color: #ff1423;">Invited Presentation, Moore Courtyard, Electrical Engineering Dept.</span></div>
                 <div><span style="color:#005A92;">MM DD, YYYY</span></div>
                 <div>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">poster</a>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/cc91b88b509d26d686f32ebf886e378f5ed2b855/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="arrow-link">poster</a>
                 </div>
             </li>
             <li>
@@ -126,7 +112,7 @@
                 <div><span style="color:#005A92;">MM DD, YYYY</span></div>
                 <div>
                     <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">poster</a>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">video</a>
+                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank" class="arrow-link">video</a>
                 </div>
             </li>
         </ul>
@@ -135,6 +121,51 @@
         <p style="margin-bottom: 0;">If you have questions about my work or if you'd just like to chat, please feel free to reach out at:</p>
         <p class="bottom_extra_space" style="margin-top: 0;">sdkyuan [at] gmail [dot] com </p>
 
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="IMG_5966.jpeg" style="width:100%">
+    <div class="text">At TechConnect in D.C</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="IMG_5727.jpeg" style="width:100%">
+    <div class="text">At the White House</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="IMG_8374.jpeg" style="width:100%">
+    <div class="text">At a roundtable in the White House</div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="IMG_6057.jpeg" style="width:100%">
+    <div class="text">Panel presentation at TechConnect</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="E3231034-F003-4FF5-B3D8-FDAE3931089D.jpeg" style="width:100%">
+    <div class="text">At Caltech</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 
         <!-- Footer -->
         <footer>
