@@ -14,7 +14,39 @@ hi
             font-family: Arial, sans-serif;
         }
 
-
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .nav-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
         .publications li {
             background: #fafafa;
             padding: 25px;
@@ -120,39 +152,7 @@ hi
     <div class="container">
         <!-- Navigation Bar -->
 /* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #333;
-    padding: 15px;
-    border-radius: 10px;
-}
 
-.nav-title {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-
-.nav-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
 
         <nav class="navbar">
             <a href="index.html" class="nav-title">Ishan Jha</a>
