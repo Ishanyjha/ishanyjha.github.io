@@ -15,56 +15,6 @@ hi
         }
 
 
-        /* Navigation Bar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #333;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 50px;
-        }
-
-        .nav-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Styling */
-        section {
-            margin-bottom: 60px;
-        }
-
-        h1, h2 {
-            margin-bottom: 25px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            max-width: 1200px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
         .publications li {
             background: #fafafa;
             padding: 25px;
