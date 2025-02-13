@@ -176,12 +176,30 @@
             <h2><center>Publications</center></h2>
             <ul class="publications">
                 <li>
-                    <strong>AI-Powered VR Simulations for Semiconductor Industry Training and Education</strong><br>
-                    <span style="color: #ff1423;">I. Jha</span>, G. Codina, A. Dong, A. Rodriguez, F. Chen, J. Zhu, K. Hong<br>
-                    <em>Journal of Advanced Technological Education</em><br>
-                    Accepted November 27, 2024<br>
-                    <a href="paper-link" target="_blank">Paper</a> | 
-                    <a href="video-link" target="_blank">Video Demo</a>
+                <div><span style="font-weight: 600;">Title</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">I Jha</span>, Others</div>
+                <div><i>Journal of Advanced Technological Education</i></div>
+                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div>
+                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
+                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">video demo</a>
+                </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2><center>Presentation</center></h2>
+            <ul class="publications">
+                <li>
+                <div><span style="font-weight: 600;">Title</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Others</div>
+                <div><i>Journal of Advanced Technological Education</i></div>
+                <div><span style="color: #ff1423;">Presentation, XYZ</span></div>
+                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div>
+                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
+                    <a href="https://arxiv.org/abs/2402.00198" target="_blank" class="arrow-link">video demo</a>
+                </div>
                 </li>
             </ul>
         </section>
