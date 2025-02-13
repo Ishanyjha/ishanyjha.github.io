@@ -44,7 +44,8 @@
         <ul class="publications">
             <li>
                 <div><span style="font-weight: 600;">AI-Powered VR Simulations for Semiconductor Industry Training and Education</span></div>
-                <div><span style="color: #ff1423; font-weight:bold;">S Yuan</span>, SV Dordevic</div>
+                <div><span style="color: #ff1423; font-weight:bold;">I. Jha</span>, G. Codina, A. Dong, A. Rodriguez, F. Chen, J. Zhu, K. Hong 
+</div>
                 <div><i>Journal of Advanced Technological Education</i></div>
                 <div><span style="color:#005A92;">Accepted November 27, 2024</span></div>
                 <div>
