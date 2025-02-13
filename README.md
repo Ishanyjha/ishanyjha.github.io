@@ -119,57 +119,143 @@
 
         <!-- Contacts Section -->
         <p style="margin-bottom: 0;">If you have questions about my work or if you'd just like to chat, please feel free to reach out at:</p>
-        <p class="bottom_extra_space" style="margin-top: 0;">sdkyuan [at] gmail [dot] com </p>
+        <p class="bottom_extra_space" style="margin-top: 0;">ishanyjha [at] gmail [dot] com </p>
 
-<!-- Slideshow container -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slideshow</title>
+<style>
+  * {box-sizing: border-box;}
+  .slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .mySlides {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  .text {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 8px;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    user-select: none;
+  }
+  .prev { left: 0; }
+  .next { right: 0; }
+  .dot-container {
+    text-align: center;
+    padding: 10px;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+</style>
+</head>
+<body>
+
 <div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="IMG_5966.jpeg" style="width:100%">
+    <div class="numbertext">1 / 5</div>
+    <img src="IMG_5966.jpeg">
     <div class="text">At TechConnect in D.C</div>
   </div>
-
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="IMG_5727.jpeg" style="width:100%">
+    <div class="numbertext">2 / 5</div>
+    <img src="IMG_5727.jpeg">
     <div class="text">At the White House</div>
   </div>
-
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="IMG_8374.jpeg" style="width:100%">
+    <div class="numbertext">3 / 5</div>
+    <img src="IMG_8374.jpeg">
     <div class="text">At a roundtable in the White House</div>
-
+  </div>
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="IMG_6057.jpeg" style="width:100%">
+    <div class="numbertext">4 / 5</div>
+    <img src="IMG_6057.jpeg">
     <div class="text">Panel presentation at TechConnect</div>
   </div>
-
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="E3231034-F003-4FF5-B3D8-FDAE3931089D.jpeg" style="width:100%">
+    <div class="numbertext">5 / 5</div>
+    <img src="E3231034-F003-4FF5-B3D8-FDAE3931089D.jpeg">
     <div class="text">At Caltech</div>
   </div>
-
-  <!-- Next and previous buttons -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
+<div class="dot-container">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
 </div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+</body>
+</html>
+
 
         <!-- Footer -->
         <footer>
-            <p class="footer_bold">Copyright &copy; 2025 Samuel Yuan. All rights reserved.</p>
+            <p class="footer_bold">Copyright &copy; Free to Use.</p>
         </footer>
     </body>
 </html>
