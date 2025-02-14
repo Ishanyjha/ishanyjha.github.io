@@ -188,7 +188,7 @@
             </ul>
         </section>
         <section>
-            <h2><center>Presentation</center></h2>
+            <h2><center>Presentations</center></h2>
             <ul class="publications">
                 <li>
                 <div><span style="font-weight: 600;">Title</span></div>
