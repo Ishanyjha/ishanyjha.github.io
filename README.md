@@ -158,9 +158,9 @@
                 <li>
                 <div><span style="font-weight: 600;">AI For Education and Training</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Others</div>
-                <div><i>Orange County Department of Education</i></div>
+                <div>Orange County Department of Education</div>
                 <div><i>Future Leaders AI Conference</i></div>                
-                <div><span style="color: #ff1423;">Presentation, J.W Marriot</span></div>
+                <div>Presentation, J.W Marriot</div>
                 <div><span style="color:#005A92;">November 20, 2024</span></div>
                 <div>
                     <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank" class="arrow-link">paper</a>      
@@ -169,8 +169,9 @@
                 <li>
                 <div><span style="font-weight: 600;">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom.</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
-                <div><i>TechConnect World Innovation Conference, XRAI for Training Symposium</i></div>
-                <div><span style="color: #ff1423;">Poster presentation and panel, The Gaylord National Hotel</span></div>
+                <div>TechConnect World Innovation Conference</div>
+                <div><i>XRAI for Training Symposium</i></div>                
+                <div>Poster presentation and panel, The Gaylord National Hotel</div>
                 <div><span style="color:#005A92;">June 16-17, 2024</span></div>
                 <div>
                     <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="arrow-link">poster</a>               
@@ -179,8 +180,9 @@
                 <li>
                 <div><span style="font-weight: 600;">Digital Twins for Semiconductor Fabrication Education.</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
-                <div><i>California Institue of Technology</i></div>
-                <div><span style="color: #ff1423;">Poster and presentation, Moore Courtyard and EECS Bldg.</span></div>
+                <div>California Institue of Technology</div>
+                <div><i>Kavli Nanoscience Institute</i></div>                
+                <div>Poster and presentation, Moore Courtyard and EECS Bldg.</div>
                 <div><span style="color:#005A92;">May 24, 2024</span></div>
                 <div>
                     <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="arrow-link">poster</a>                
@@ -189,8 +191,9 @@
                 <li>
                 <div><span style="font-weight: 600;">Empowering Students Through AI Clubs</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span></div>
-                <div><i>Orange County Department of Education</i></div>
-                <div><span style="color: #ff1423;">Presentation, J.W Marriot</span></div>
+                <div>Orange County Department of Education</div>
+                <div><i>Student AI Convening</i></div>                
+                <div>Presentation, J.W Marriot</div>
                 <div><span style="color:#005A92;">May 4, 2024</span></div>
                 <div>
                     <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank" class="arrow-link">paper</a>
