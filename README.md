@@ -217,6 +217,7 @@
             dots[slideIndex - 1].className += " active";
         }
     </script>
-
-</body>
+        <footer>
+            <p class="footer_bold">Copyright &copy; 2025 Ishan Jha</p>
+        </footer></body>
 </html>
