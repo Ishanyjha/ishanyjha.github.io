@@ -156,16 +156,47 @@
             <h2><center>Presentations</center></h2>
             <ul class="publications">
                 <li>
-                <div><span style="font-weight: 600;">Title</span></div>
+                <div><span style="font-weight: 600;">AI For Education and Training</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Others</div>
-                <div><i>Journal of Advanced Technological Education</i></div>
-                <div><span style="color: #ff1423;">Presentation, XYZ</span></div>
-                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div><i>Orange County Department of Education</i></div>
+                <div><i>Future Leaders AI Conference</i></div>                
+                <div><span style="color: #ff1423;">Presentation, J.W Marriot</span></div>
+                <div><span style="color:#005A92;">November 20, 2024</span></div>
                 <div>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
-                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" class="arrow-link">video demo</a>
+                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank" class="arrow-link">paper</a>      
                 </div>
                 </li>
+                <li>
+                <div><span style="font-weight: 600;">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom.</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
+                <div><i>TechConnect World Innovation Conference, XRAI for Training Symposium</i></div>
+                <div><span style="color: #ff1423;">Poster presentation and panel, The Gaylord National Hotel</span></div>
+                <div><span style="color:#005A92;">June 16-17, 2024</span></div>
+                <div>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="arrow-link">poster</a>               
+                </div>
+                </li>
+                <li>
+                <div><span style="font-weight: 600;">Digital Twins for Semiconductor Fabrication Education.</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
+                <div><i>California Institue of Technology</i></div>
+                <div><span style="color: #ff1423;">Poster and presentation, Moore Courtyard and EECS Bldg.</span></div>
+                <div><span style="color:#005A92;">May 24, 2024</span></div>
+                <div>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="arrow-link">poster</a>                
+                </div>
+                </li>  
+                <li>
+                <div><span style="font-weight: 600;">Empowering Students Through AI Clubs</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span></div>
+                <div><i>Orange County Department of Education</i></div>
+                <div><span style="color: #ff1423;">Presentation, J.W Marriot</span></div>
+                <div><span style="color:#005A92;">May 4, 2024</span></div>
+                <div>
+                    <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank" class="arrow-link">paper</a>
+                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" class="arrow-link">video demo</a>                
+                </div>
+                </li>            
             </ul>
         </section>
 
