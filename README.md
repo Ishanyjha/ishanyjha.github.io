@@ -132,8 +132,8 @@
         <section>
             <h1><center>Welcome!</center></h1>
             <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
-            <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within mathematics, my interests include topology and differential geometry. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
-            <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI.</p>
+            <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within artificial intelligence, my interests include geometric deep learning and physics-informed neural networks (PINNS, PINOs, PFNOs, SB/PI-NNs) which I am exploring through literature and projects. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
+            <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested in AI, math, and research!</p>
         </section>
 
         <!-- Publications Section -->
@@ -146,8 +146,9 @@
                 <div><i>Journal of Advanced Technological Education</i></div>
                 <div><span style="color:#005A92;">Accepted November 27, 2024</span></div>
                 <div>
-                    <a href="https://www.nature.com/articles/s41598-024-61040-3" target="_blank" class="arrow-link">paper</a>
+                    <a href="https://zenodo.org/records/14933891" target="_blank" class="arrow-link">paper</a>
                     <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" class="arrow-link">video demo</a>
+                    <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" class="arrow-link">NSF feature</a>
                 </div>
                 </li>
             </ul>
