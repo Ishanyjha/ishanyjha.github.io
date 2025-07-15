@@ -156,6 +156,28 @@
         <section>
             <h2><center>Presentations</center></h2>
             <ul class="publications">
+            <li>
+                <div><span style="font-weight: 600;">AI For Education and Training</span></div>
+                <div><span style="color: #ff1423; K. Hong, font-weight:bold;">Ishan Jha, </span>N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop</div>
+                <div>TechConnect Word Conference</div>
+                <div><i>University of California, Irvine ; Princeton University</i></div>                
+                <div>Poster and Ivnited Talk, J.W Marriot Austin</div>
+                <div><span style="color:#005A92;">June 9-11, 2025</span></div>
+                <div>
+                    <a href="https://princeton.edu" target="_blank" class="arrow-link">poster</a>      
+                </div>
+                </li>
+            <li>
+                <div><span style="font-weight: 600;">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</span></div>
+                <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha,</span>  Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
+                <div>California Institute of Technology</div>
+                <div><i>Kavli Nanoscience Institute</i></div>                
+                <div>Poster Presentation, Moore Courtyard</div>
+                <div><span style="color:#005A92;">May 30, 2025</span></div>
+                <div>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank" class="arrow-link">poster</a>      
+                </div>
+                </li>
                 <li>
                 <div><span style="font-weight: 600;">AI For Education and Training</span></div>
                 <div><span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Others</div>
@@ -164,7 +186,7 @@
                 <div>Presentation, J.W Marriot</div>
                 <div><span style="color:#005A92;">November 20, 2024</span></div>
                 <div>
-                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank" class="arrow-link">paper</a>      
+                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank" class="arrow-link">slides</a>      
                 </div>
                 </li>
                 <li>
@@ -198,60 +220,12 @@
                 <div><span style="color:#005A92;">May 4, 2024</span></div>
                 <div>
                     <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank" class="arrow-link">paper</a>
-                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" class="arrow-link">video demo</a>                
+                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" class="arrow-link">video</a>                
                 </div>
                 </li>            
             </ul>
         </section>
 
-        <!-- Slideshow -->
-        <section>
-            <h2><center>Gallery</center></h2>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="IMG_5966.jpeg" alt="TechConnect">
-                    <div class="text">At TechConnect in D.C</div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="IMG_5727.jpeg" alt="White House">
-                    <div class="text">At the White House</div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-
-            <div class="dots-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            Copyright &copy; Free to Use.
-        </footer>
-    </div>
-
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) { showSlides(slideIndex += n); }
-        function currentSlide(n) { showSlides(slideIndex = n); }
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-
-            for (let slide of slides) { slide.style.display = "none"; }
-            for (let dot of dots) { dot.className = dot.className.replace(" active", ""); }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
         <footer>
             <p class="footer_bold">Copyright &copy; 2025 Ishan Jha</p>
         </footer></body>
