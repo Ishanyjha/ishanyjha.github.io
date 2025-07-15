@@ -132,7 +132,7 @@
         <section>
             <h1><center>Welcome!</center></h1>
             <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
-            <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within artificial intelligence, my interests include geometric deep learning and physics-informed neural networks (PINNS, PINOs, PFNOs, SB/PI-NNs) which I am exploring through literature and projects. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
+            <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring omputer vision and physics-informed neural networks through literature and projects. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
             <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested in AI, math, and research!</p>
         </section>
 
