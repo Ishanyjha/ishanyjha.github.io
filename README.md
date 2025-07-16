@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishan Jha - Portfolio</title>
+    <title>Ishan Jha</title>
     <style>
         * {
             box-sizing: border-box;
@@ -239,11 +239,12 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-content">
-            <a href="index.html" class="nav-title">Ishan Jha</a>
             <div class="nav-links">
+                <center>
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank" class="nav-link">Google Scholar</a>
                 <a href="https://github.com/ishanyjha" target="_blank" class="nav-link">GitHub</a>
+                </center>
             </div>
         </div>
     </nav>
@@ -278,7 +279,7 @@
                     </button>
                     <div class="abstract-content" id="abstract-pub-1">
                         <div class="abstract-text">
-                            We present an innovative approach to semiconductor industry training through AI-powered virtual reality simulations. Our system combines advanced artificial intelligence algorithms with immersive VR technology to create realistic training environments for semiconductor manufacturing processes. The platform provides hands-on experience in cleanroom operations, equipment handling, and safety protocols without the risks and costs associated with traditional training methods.
+                            VR simulations hold great potential for training, and AI capabilities can scaffold the learning process through large language model (LLM) powered tutors that provide personalized responses to students. However, such training typically requires multidisciplinary teams of programmers, 3D artists, and instructional designers, and complex software such as game engines. If such advanced training could be created by less skilled users using simpler software, then a vast amount of quality training would become available to help address the workforce challenges. Here, we investigate whether it is feasible for community college and K-12 students to create such VR simulations. We describe how the students in the author group designed and created an AI-powered VR simulation for a common semiconductor fabrication process and pilot-tested it to evaluate its effectiveness. Pilot test results show that students reported high levels of engagement, ease of use, and increased interest in and knowledge of semiconductor manufacturing. Linear regression analysis of the data revealed that engagement, ease of use, knowledge increase, and interest increase are significant predictors of the desire to use VR training in the future. These findings show that given well-designed software tools and expert mentoring, a team of community college and K-12 students can successfully produce engaging and effective VR training simulations. Our work suggests a nationally scalable approach to addressing the semiconductor workforce challenge while also training the next generation of VR simulation developers. To our knowledge, this is the first time K-12 and community college students have developed and evaluated VR simulations with high efficiency and engagement.
                         </div>
                     </div>
                 </div>
@@ -307,19 +308,6 @@
                 <div class="publication-details">Poster and Invited Talk, J.W Marriot Austin</div>
                 <div class="publication-date">June 9-11, 2025</div>
                 
-                <div class="abstract-container">
-                    <button class="abstract-button" onclick="toggleAbstract('pres-1')">
-                        <span>abstract</span>
-                        <svg class="chevron" id="chevron-pres-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="abstract-content" id="abstract-pres-1">
-                        <div class="abstract-text">
-                            This presentation explores the transformative potential of artificial intelligence in educational settings and professional training environments. We discuss innovative AI applications that enhance learning outcomes, personalize educational experiences, and provide scalable training solutions across various industries.
-                        </div>
-                    </div>
-                </div>
 
                 <div class="publication-links">
                     <span class="link-bracket">[</span>
@@ -336,19 +324,7 @@
                 <div class="publication-details">Poster Presentation, Moore Courtyard</div>
                 <div class="publication-date">May 30, 2025</div>
                 
-                <div class="abstract-container">
-                    <button class="abstract-button" onclick="toggleAbstract('pres-2')">
-                        <span>abstract</span>
-                        <svg class="chevron" id="chevron-pres-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="abstract-content" id="abstract-pres-2">
-                        <div class="abstract-text">
-                            We introduce a novel approach to semiconductor manufacturing education through agentic AI-embedded digital twins. Our system creates intelligent virtual representations of manufacturing processes that can autonomously adapt and respond to different educational scenarios, providing students with dynamic and interactive learning experiences.
-                        </div>
-                    </div>
-                </div>
+    
 
                 <div class="publication-links">
                     <span class="link-bracket">[</span>
