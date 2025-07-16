@@ -240,11 +240,11 @@
     <nav class="navbar">
         <div class="navbar-content">
             <div class="nav-links">
-                <center>
+
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank" class="nav-link">Google Scholar</a>
                 <a href="https://github.com/ishanyjha" target="_blank" class="nav-link">GitHub</a>
-                </center>
+
             </div>
         </div>
     </nav>
