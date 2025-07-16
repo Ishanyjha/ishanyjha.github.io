@@ -1,319 +1,444 @@
-"use client"
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
-import Link from "next/link"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Jha - Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-interface PublicationProps {
-  title: string
-  authors: string
-  venue: string
-  institution?: string
-  details?: string
-  date: string
-  links: { label: string; url: string }[]
-  abstract?: string
-  isAbstractOpen: boolean
-  onAbstractToggle: () => void
-}
+        body {
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
 
-function PublicationPanel({
-  title,
-  authors,
-  venue,
-  institution,
-  details,
-  date,
-  links,
-  abstract,
-  isAbstractOpen,
-  onAbstractToggle,
-}: PublicationProps) {
-  return (
-    <div className="max-w-4xl mx-auto mb-8 space-y-2">
-      {/* Title */}
-      <h3 className="text-lg font-semibold text-gray-900 leading-tight">{title}</h3>
+        /* Navigation */
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 1.5rem;
+        }
 
-      {/* Authors */}
-      <div className="text-base text-gray-900" dangerouslySetInnerHTML={{ __html: authors }} />
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      {/* Venue */}
-      <div className="text-base italic text-gray-900">{venue}</div>
+        .nav-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111;
+            text-decoration: none;
+        }
 
-      {/* Institution */}
-      {institution && <div className="text-base italic text-gray-900">{institution}</div>}
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
 
-      {/* Details */}
-      {details && <div className="text-base text-gray-900">{details}</div>}
+        .nav-link {
+            color: #555;
+            text-decoration: none;
+        }
 
-      {/* Date */}
-      <div className="text-base text-[#005A92]">{date}</div>
+        .nav-link:hover {
+            color: #111;
+        }
 
-      {/* Abstract dropdown */}
-      {abstract && (
-        <div className="mt-4">
-          <button
-            onClick={onAbstractToggle}
-            className="flex items-center gap-2 text-base font-medium text-gray-900 hover:text-gray-700 transition-colors"
-          >
-            <span>abstract</span>
-            <ChevronDown
-              className={`w-4 h-4 transition-transform duration-200 ${isAbstractOpen ? "rotate-180" : ""}`}
-            />
-          </button>
+        /* Main content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
 
-          {/* Abstract content */}
-          <div
-            className={`overflow-hidden transition-all duration-300 ${
-              isAbstractOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
-            }`}
-          >
-            <div className="text-base text-gray-800 leading-relaxed">
-              <p>{abstract}</p>
+        /* Introduction */
+        .intro {
+            margin-bottom: 3rem;
+        }
+
+        .intro h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+        }
+
+        .intro-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Publication items */
+        .publication-item {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .publication-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            font-size: 1rem;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-highlight {
+            color: #ff1423;
+            font-weight: bold;
+        }
+
+        .publication-venue {
+            font-size: 1rem;
+            font-style: italic;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-institution {
+            font-size: 1rem;
+            font-style: italic;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-details {
+            font-size: 1rem;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-date {
+            font-size: 1rem;
+            color: #005A92;
+            margin-bottom: 1rem;
+        }
+
+        /* Abstract dropdown */
+        .abstract-container {
+            margin: 1rem 0;
+        }
+
+        .abstract-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #111;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .abstract-button:hover {
+            color: #555;
+        }
+
+        .chevron {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s;
+        }
+
+        .chevron.rotated {
+            transform: rotate(180deg);
+        }
+
+        .abstract-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .abstract-content.open {
+            max-height: 400px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        .abstract-text {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Links */
+        .publication-links {
+            display: flex;
+            gap: 0.25rem;
+            font-size: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .link-bracket {
+            color: #111;
+        }
+
+        .publication-link {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .publication-link:hover {
+            color: #1d4ed8;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .footer p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="nav-title">Ishan Jha</a>
+            <div class="nav-links">
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank" class="nav-link">Google Scholar</a>
+                <a href="https://github.com/ishanyjha" target="_blank" class="nav-link">GitHub</a>
             </div>
-          </div>
         </div>
-      )}
+    </nav>
 
-      {/* Links */}
-      <div className="flex gap-1 text-base">
-        {links.map((link, index) => (
-          <span key={index}>
-            <span className="text-gray-900">[</span>
-            <Link href={link.url} target="_blank" className="text-blue-600 hover:text-blue-800 underline">
-              {link.label}
-            </Link>
-            <span className="text-gray-900">]</span>
-            {index < links.length - 1 && <span className="text-gray-900"> </span>}
-          </span>
-        ))}
-      </div>
+    <div class="container">
+        <!-- Introduction -->
+        <section class="intro">
+            <h1>Welcome!</h1>
+            <div class="intro-content">
+                <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
+                <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring computer vision and physics-informed neural networks through literature and projects. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
+                <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested in AI, math, and research!</p>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section">
+            <h2>Publications</h2>
+            
+            <div class="publication-item">
+                <div class="publication-title">AI-Powered VR Simulations for Semiconductor Industry Training and Education</div>
+                <div class="publication-authors"><span class="author-highlight">I. Jha</span>, G. Codina, A. Dong, K. Hong, A. Rodriguez, F. Chen, J. Zhu, G.P Li</div>
+                <div class="publication-venue">Journal of Advanced Technological Education</div>
+                <div class="publication-date">Accepted November 27, 2024</div>
+                
+                <div class="abstract-container">
+                    <button class="abstract-button" onclick="toggleAbstract('pub-1')">
+                        <span>abstract</span>
+                        <svg class="chevron" id="chevron-pub-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="abstract-content" id="abstract-pub-1">
+                        <div class="abstract-text">
+                            We present an innovative approach to semiconductor industry training through AI-powered virtual reality simulations. Our system combines advanced artificial intelligence algorithms with immersive VR technology to create realistic training environments for semiconductor manufacturing processes. The platform provides hands-on experience in cleanroom operations, equipment handling, and safety protocols without the risks and costs associated with traditional training methods.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://zenodo.org/records/14933891" target="_blank" class="publication-link">paper</a>
+                    <span class="link-bracket">] [</span>
+                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" target="_blank" class="publication-link">video demo</a>
+                    <span class="link-bracket">] [</span>
+                    <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank" class="publication-link">NSF feature</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentations Section -->
+        <section class="section">
+            <h2>Presentations</h2>
+            
+            <div class="publication-item">
+                <div class="publication-title">AI For Education and Training</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha, </span>K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop</div>
+                <div class="publication-venue">TechConnect Word Conference</div>
+                <div class="publication-institution">University of California, Irvine ; Princeton University</div>
+                <div class="publication-details">Poster and Invited Talk, J.W Marriot Austin</div>
+                <div class="publication-date">June 9-11, 2025</div>
+                
+                <div class="abstract-container">
+                    <button class="abstract-button" onclick="toggleAbstract('pres-1')">
+                        <span>abstract</span>
+                        <svg class="chevron" id="chevron-pres-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="abstract-content" id="abstract-pres-1">
+                        <div class="abstract-text">
+                            This presentation explores the transformative potential of artificial intelligence in educational settings and professional training environments. We discuss innovative AI applications that enhance learning outcomes, personalize educational experiences, and provide scalable training solutions across various industries.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://princeton.edu" target="_blank" class="publication-link">poster</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha,</span> Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
+                <div class="publication-venue">California Institute of Technology</div>
+                <div class="publication-institution">Kavli Nanoscience Institute</div>
+                <div class="publication-details">Poster Presentation, Moore Courtyard</div>
+                <div class="publication-date">May 30, 2025</div>
+                
+                <div class="abstract-container">
+                    <button class="abstract-button" onclick="toggleAbstract('pres-2')">
+                        <span>abstract</span>
+                        <svg class="chevron" id="chevron-pres-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="abstract-content" id="abstract-pres-2">
+                        <div class="abstract-text">
+                            We introduce a novel approach to semiconductor manufacturing education through agentic AI-embedded digital twins. Our system creates intelligent virtual representations of manufacturing processes that can autonomously adapt and respond to different educational scenarios, providing students with dynamic and interactive learning experiences.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank" class="publication-link">poster</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">AI For Education and Training</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span>, Others</div>
+                <div class="publication-venue">Orange County Department of Education</div>
+                <div class="publication-institution">Future Leaders AI Conference</div>
+                <div class="publication-details">Presentation, J.W Marriot</div>
+                <div class="publication-date">November 20, 2024</div>
+                
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank" class="publication-link">slides</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom.</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
+                <div class="publication-venue">TechConnect World Innovation Conference</div>
+                <div class="publication-institution">XRAI for Training Symposium</div>
+                <div class="publication-details">Poster presentation and panel, The Gaylord National Hotel</div>
+                <div class="publication-date">June 16-17, 2024</div>
+                
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="publication-link">poster</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Digital Twins for Semiconductor Fabrication Education.</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
+                <div class="publication-venue">California Institute of Technology</div>
+                <div class="publication-institution">Kavli Nanoscience Institute</div>
+                <div class="publication-details">Poster and presentation, Moore Courtyard and EECS Bldg.</div>
+                <div class="publication-date">May 24, 2024</div>
+                
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="publication-link">poster</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Empowering Students Through AI Clubs</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span></div>
+                <div class="publication-venue">Orange County Department of Education</div>
+                <div class="publication-institution">Student AI Convening</div>
+                <div class="publication-details">Presentation, J.W Marriot</div>
+                <div class="publication-date">May 4, 2024</div>
+                
+                <div class="publication-links">
+                    <span class="link-bracket">[</span>
+                    <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank" class="publication-link">slides</a>
+                    <span class="link-bracket">] [</span>
+                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank" class="publication-link">video</a>
+                    <span class="link-bracket">]</span>
+                </div>
+            </div>
+        </section>
     </div>
-  )
-}
 
-export default function Portfolio() {
-  const [openAbstracts, setOpenAbstracts] = useState<Set<string>>(new Set())
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; 2025 Ishan Jha</p>
+    </footer>
 
-  const toggleAbstract = (id: string) => {
-    const newOpen = new Set(openAbstracts)
-    if (newOpen.has(id)) {
-      newOpen.delete(id)
-    } else {
-      newOpen.add(id)
-    }
-    setOpenAbstracts(newOpen)
-  }
-
-  const publications = [
-    {
-      id: "pub-1",
-      title: "AI-Powered VR Simulations for Semiconductor Industry Training and Education",
-      authors:
-        '<span style="color: #ff1423; font-weight:bold;">I. Jha</span>, G. Codina, A. Dong, K. Hong, A. Rodriguez, F. Chen, J. Zhu, G.P Li',
-      venue: "Journal of Advanced Technological Education",
-      date: "Accepted November 27, 2024",
-      abstract:
-        "We present an innovative approach to semiconductor industry training through AI-powered virtual reality simulations. Our system combines advanced artificial intelligence algorithms with immersive VR technology to create realistic training environments for semiconductor manufacturing processes. The platform provides hands-on experience in cleanroom operations, equipment handling, and safety protocols without the risks and costs associated with traditional training methods.",
-      links: [
-        { label: "paper", url: "https://zenodo.org/records/14933891" },
-        { label: "video demo", url: "https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" },
-        { label: "NSF feature", url: "https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" },
-      ],
-    },
-  ]
-
-  const presentations = [
-    {
-      id: "pres-1",
-      title: "AI For Education and Training",
-      authors:
-        '<span style="color: #ff1423; font-weight:bold;">Ishan Jha, </span>K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop',
-      venue: "TechConnect Word Conference",
-      institution: "University of California, Irvine ; Princeton University",
-      details: "Poster and Invited Talk, J.W Marriot Austin",
-      date: "June 9-11, 2025",
-      abstract:
-        "This presentation explores the transformative potential of artificial intelligence in educational settings and professional training environments. We discuss innovative AI applications that enhance learning outcomes, personalize educational experiences, and provide scalable training solutions across various industries.",
-      links: [{ label: "poster", url: "https://princeton.edu" }],
-    },
-    {
-      id: "pres-2",
-      title: "Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education",
-      authors:
-        '<span style="color: #ff1423; font-weight:bold;">Ishan Jha,</span> Kristal Hong, Nick Vatanshenas, Adam Ashcroft',
-      venue: "California Institute of Technology",
-      institution: "Kavli Nanoscience Institute",
-      details: "Poster Presentation, Moore Courtyard",
-      date: "May 30, 2025",
-      abstract:
-        "We introduce a novel approach to semiconductor manufacturing education through agentic AI-embedded digital twins. Our system creates intelligent virtual representations of manufacturing processes that can autonomously adapt and respond to different educational scenarios, providing students with dynamic and interactive learning experiences.",
-      links: [
-        {
-          label: "poster",
-          url: "https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf",
-        },
-      ],
-    },
-    {
-      id: "pres-3",
-      title: "AI For Education and Training",
-      authors: '<span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Others',
-      venue: "Orange County Department of Education",
-      institution: "Future Leaders AI Conference",
-      details: "Presentation, J.W Marriot",
-      date: "November 20, 2024",
-      links: [
-        {
-          label: "slides",
-          url: "https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing",
-        },
-      ],
-    },
-    {
-      id: "pres-4",
-      title: "Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom.",
-      authors:
-        '<span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong',
-      venue: "TechConnect World Innovation Conference",
-      institution: "XRAI for Training Symposium",
-      details: "Poster presentation and panel, The Gaylord National Hotel",
-      date: "June 16-17, 2024",
-      links: [
-        {
-          label: "poster",
-          url: "https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf",
-        },
-      ],
-    },
-    {
-      id: "pres-5",
-      title: "Digital Twins for Semiconductor Fabrication Education.",
-      authors:
-        '<span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen',
-      venue: "California Institute of Technology",
-      institution: "Kavli Nanoscience Institute",
-      details: "Poster and presentation, Moore Courtyard and EECS Bldg.",
-      date: "May 24, 2024",
-      links: [
-        {
-          label: "poster",
-          url: "https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf",
-        },
-      ],
-    },
-    {
-      id: "pres-6",
-      title: "Empowering Students Through AI Clubs",
-      authors: '<span style="color: #ff1423; font-weight:bold;">Ishan Jha</span>',
-      venue: "Orange County Department of Education",
-      institution: "Student AI Convening",
-      details: "Presentation, J.W Marriot",
-      date: "May 4, 2024",
-      links: [
-        {
-          label: "slides",
-          url: "https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing",
-        },
-        { label: "video", url: "https://www.youtube.com/watch?v=NugQOMaJuuw" },
-      ],
-    },
-  ]
-
-  return (
-    <div className="min-h-screen bg-white font-sans">
-      {/* Navigation Bar */}
-      <nav className="bg-white border-b border-gray-200 px-6 py-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-gray-900 no-underline">
-            Ishan Jha
-          </Link>
-          <div className="flex gap-6">
-            <Link href="/projects" className="text-gray-700 hover:text-gray-900 no-underline">
-              Projects
-            </Link>
-            <Link
-              href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&"
-              target="_blank"
-              className="text-gray-700 hover:text-gray-900 no-underline"
-            >
-              Google Scholar
-            </Link>
-            <Link
-              href="https://github.com/ishanyjha"
-              target="_blank"
-              className="text-gray-700 hover:text-gray-900 no-underline"
-            >
-              GitHub
-            </Link>
-          </div>
-        </div>
-      </nav>
-
-      <div className="max-w-6xl mx-auto px-6 py-8">
-        {/* Introduction */}
-        <section className="mb-12">
-          <h1 className="text-3xl font-bold text-center mb-6">Welcome!</h1>
-          <div className="space-y-4 text-gray-800 leading-relaxed max-w-4xl mx-auto">
-            <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
-            <p>
-              My passions are theoretical mathematics, artificial intelligence, and its applications. Within artificial
-              intelligence, I am currently exploring computer vision and physics-informed neural networks through
-              literature and projects. I also enjoy studying the applications of these ideas in machine learning and
-              industry.
-            </p>
-            <p>
-              Another passion of mine is conducting academic research, helping students with math at the UCI Math
-              Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested
-              in AI, math, and research!
-            </p>
-          </div>
-        </section>
-
-        {/* Publications Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-center mb-8">Publications</h2>
-          {publications.map((pub) => (
-            <PublicationPanel
-              key={pub.id}
-              title={pub.title}
-              authors={pub.authors}
-              venue={pub.venue}
-              institution={pub.institution}
-              details={pub.details}
-              date={pub.date}
-              links={pub.links}
-              abstract={pub.abstract}
-              isAbstractOpen={openAbstracts.has(pub.id)}
-              onAbstractToggle={() => toggleAbstract(pub.id)}
-            />
-          ))}
-        </section>
-
-        {/* Presentations Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-center mb-8">Presentations</h2>
-          {presentations.map((pres) => (
-            <PublicationPanel
-              key={pres.id}
-              title={pres.title}
-              authors={pres.authors}
-              venue={pres.venue}
-              institution={pres.institution}
-              details={pres.details}
-              date={pres.date}
-              links={pres.links}
-              abstract={pres.abstract}
-              isAbstractOpen={openAbstracts.has(pres.id)}
-              onAbstractToggle={() => toggleAbstract(pres.id)}
-            />
-          ))}
-        </section>
-      </div>
-
-      {/* Footer */}
-      <footer className="mt-16 p-6 bg-gray-800 text-white text-center rounded-lg mx-6">
-        <p className="font-bold">Copyright © 2025 Ishan Jha</p>
-      </footer>
-    </div>
-  )
-}
+    <script>
+        function toggleAbstract(id) {
+            const abstractContent = document.getElementById('abstract-' + id);
+            const chevron = document.getElementById('chevron-' + id);
+            
+            if (abstractContent.classList.contains('open')) {
+                abstractContent.classList.remove('open');
+                chevron.classList.remove('rotated');
+            } else {
+                abstractContent.classList.add('open');
+                chevron.classList.add('rotated');
+            }
+        }
+    </script>
+</body>
+</html>
