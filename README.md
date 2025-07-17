@@ -292,6 +292,8 @@
                     <span class="link-bracket">] [</span>
                     <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank" class="publication-link">NSF feature</a>
                     <span class="link-bracket">]</span>
+                    <a href="https://launch.siminsights.com?s=f70bd167-3f04-4f28-8339-7ff5fab28807" target="_blank" class="publication-link">launch</a>
+                    <span class="link-bracket">]</span>
                 </div>
             </div>
         </section>
