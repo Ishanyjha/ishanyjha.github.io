@@ -303,8 +303,8 @@
             <h2>Presentations</h2>
             
             <div class="publication-item">
-                <div class="publication-title">AI For Education and Training</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha, </span>K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop</div>
+                <div class="publication-title">Virtualizing Real World Learning Experiences with Digital Twins</div>
+                <div class="publication-authors"><span class="author-highlight">Ishan Jha, </span>K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop, S. Wu</div>
                 <div class="publication-venue">TechConnect Word Conference</div>
                 <div class="publication-institution">University of California, Irvine ; Princeton University</div>
                 <div class="publication-details">Poster and Invited Talk, J.W Marriot Austin</div>
