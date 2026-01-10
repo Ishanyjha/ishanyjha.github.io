@@ -254,9 +254,9 @@
         <section class="intro">
             <h1>Welcome!</h1>
             <div class="intro-content">
-                <p>Greetings, I am a ninth grader at Troy High School in Fullerton, California.</p>
-                <p>My passions are theoretical mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring computer vision and physics-informed neural networks through literature and projects. I also enjoy studying the applications of these ideas in machine learning and industry.</p>
-                <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested in AI, math, and research!</p>
+                <p>Greetings, I am in 10th grade at Troy High School in Fullerton, California.</p>
+                <p>My passions are mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring the use and integration of diverse architectures to understand physical phenomenon and model complex processes.</p>
+                <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested in AI, math, and the sciences!</p>
             </div>
         </section>
 
@@ -291,7 +291,7 @@
                     <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" target="_blank" class="publication-link">video demo</a>
                     <span class="link-bracket">] [</span>
                     <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank" class="publication-link">NSF feature</a>
-                    <span class="link-bracket">]</span>
+                    <span class="link-bracket">] [</span>
                     <a href="https://launch.siminsights.com?s=f70bd167-3f04-4f28-8339-7ff5fab28807" target="_blank" class="publication-link">launch</a>
                     <span class="link-bracket">]</span>
                 </div>
