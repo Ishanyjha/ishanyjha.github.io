@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --blue: #2563eb; /* Replaced purple with a nice blue */
+            --blue: #2563eb; 
             --text-main: #333333;
             --text-muted: #666666;
             --bg-light: #f9f9f9;
@@ -95,7 +95,7 @@
             color: #444;
         }
 
-        /* Sections */
+        /* Sections General */
         .section {
             margin-bottom: 4rem;
         }
@@ -108,7 +108,6 @@
             padding-top: 1rem;
         }
 
-        /* The colored bar above the section headers to match the template */
         .section-header::before {
             content: '';
             position: absolute;
@@ -119,7 +118,41 @@
             background-color: var(--blue);
         }
 
-        /* Publication / Research Items */
+        /* News List */
+        .news-item {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: #111;
+            min-width: 90px;
+            flex-shrink: 0;
+        }
+
+        .news-content {
+            color: var(--text-main);
+            flex-grow: 1;
+        }
+
+        .news-content a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Publication / Research Items (With Images) */
         .research-item {
             display: flex;
             gap: 1.5rem;
@@ -146,6 +179,19 @@
             border: 1px solid var(--border-color);
         }
 
+        /* Presentation List Items (No Images) */
+        .presentation-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .presentation-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
         .item-content {
             flex-grow: 1;
         }
@@ -161,6 +207,12 @@
             font-size: 0.95rem;
             color: #555;
             margin-bottom: 0.3rem;
+        }
+
+        .item-desc {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 0.5rem;
         }
 
         .author-highlight {
@@ -217,6 +269,7 @@
             display: flex;
             gap: 0.75rem;
             flex-wrap: wrap;
+            margin-top: 0.5rem;
         }
 
         .item-links a {
@@ -225,7 +278,7 @@
             text-decoration: none;
             font-weight: 500;
             padding: 0.2rem 0.5rem;
-            background: #eff6ff; /* Very light blue background */
+            background: #eff6ff;
             border-radius: 4px;
             transition: background 0.2s;
         }
@@ -262,6 +315,11 @@
                 justify-content: center;
             }
 
+            .news-item {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
             .research-item {
                 flex-direction: column;
             }
@@ -278,7 +336,7 @@
     <header>
         <div class="header-title">
             <h1>Ishan Jha</h1>
-            <div class="subtitle">High School Student @ Troy High School</div>
+            <div class="subtitle">Student at Troy High School</div>
         </div>
         <div class="nav-links">
             <a href="projects.html">Projects</a>
@@ -292,13 +350,79 @@
         
         <div class="intro-text">
             <p>Greetings, I am in 10th grade at Troy High School in Fullerton, California.</p>
-            <p>My passions are mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring the use and integration of diverse architectures to understand physical phenomenon and model complex processes.</p>
+            <p>My passions are mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring the use and integration of diverse AI architectures to understand physical phenomenon and model complex processes.</p>
             <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like-minded people who are interested in AI, math, and the sciences!</p>
         </div>
     </div>
 
     <div class="section">
+        <h2 class="section-header">News</h2>
+        
+        <div class="news-item">
+            <div class="news-date">Mar 2026</div>
+            <div class="news-content">My project <b>Gradient Entropy Regularization for Physics-Constrained Solving of Partial Differential Equations</b> won 3rd Place in the Mathematics Category at the <a href="https://ocsef.org/fair/awards"> target="_blank"> Orange County Science and Engineering Fair</a>! .</div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">Mar 2026</div>
+            <div class="news-content">Our latest <a href="https://zenodo.org/records/19241366" target="_blank">paper</a> has been accepted to JATE.</div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">Mar 2026</div>
+            <div class="news-content">Hosted the <a href="https://www.techconnectworld.com/World2026/" target="_blank">1st Digital Twins and AI Content Capture, Customization and Creation Workshop</a> at TechConnect 2026 alongisde UC Irvine, Mercer and Princeton University in Raleigh, NC..</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-header">Research</h2>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Statistical Methods for Physics-Informed Machine Learning</div>
+                <div class="item-desc">Investigating the application of Physics-Informed Neural Networks to model advanced physical phenomena. Working on entropic regularizations for PINN models.</div>
+                
+                <div class="item-links">
+                    <a href="#">💻 GitHub Repo (Coming Soon)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Digital Twins for Modelling Manufacturing and Industrial Processes</div>
+                <div class="item-desc">Using digital twin technologies, integrated into VR platforms, to support, train and develop advanced microfabrication industries. Building a community of American universities to implement DT/AI methodology.</div>
+                
+                <div class="item-links">
+                    <a href="https://www.techconnectworld.com/World2026/sym/technical_symposia.html">📄 Our Latest Workshop</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
         <h2 class="section-header">Publications</h2>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">A Multi-Institutional Digital Twin and AI Educational Platform for Advanced Microelectronics Fabrication and Device Packaging Training</div>
+                <div class="item-authors"><span class="author-highlight">I. Jha</span>, G. Codina, A. Dong, K. Hong, A. Rodriguez, F. Chen, J. Zhu, G.P Li</div>
+                <div class="item-venue"><i>Journal of Advanced Technological Education</i></div>
+                <div class="item-date">Accepted Nov 2024</div>
+                
+                <details>
+                    <summary>Abstract</summary>
+                    <div class="abstract-text">
+                        Technology today is at a crossroads between Industry 4.0 and 5.0, where products and services are manufactured and designed to be ‘human-centered’ and sustainable. Such objectives have always been expected in education, especially in the way the workforce is trained. Leveraging on prior research which was done by a team from Pasadena City College (PCC) and UC Irvine, we have formed a bi-coastal collaborative, including Mercer County Community College (MCCC) and Princeton University, to expand and transcend our earlier AI-powered virtual reality (VR) simulation framework and platform, AI-powered digital twin (DT/AI) for education. This Phase-2 effort demonstrates a working, multi-institution R&D platform with the following capabilities: (a) new training modules with enhanced lithography training and advanced device packaging, (b) better optimized, high-fidelity equipment emulations and process simulations that much closely replicate the physical equipment, (c) adherence to documented facility-specific Standard Operation Procedure (SOP) and manufacturing process flow, (d) a parallel fabricated chip-under-test and its test board for I/O connectivity verification, and last but not the least, (e) a tightly-coupled agentic AI engines available throughout the training session to customize learner-centric experiences to enhance individual knowledge acquisition and retention. The authors also continue to demonstrate the feasibility and scalability benefits of foundational VR/AR-based training for students, technicians, and up-skill learners for whom direct cleanroom or packaging lab access is often unattainable; while with DT/AI, learning and feedback is affordable and widely accessible.
+                    </div>
+                </details>
+
+                <div class="item-links">
+                    <a href="https://zenodo.org/records/19241366" target="_blank">📄 Paper</a>
+                </div>
+            </div>
+        </div>
         
         <div class="research-item">
             <div class="item-image">Image Placeholder</div>
@@ -328,84 +452,72 @@
     <div class="section">
         <h2 class="section-header">Presentations</h2>
         
-        <div class="research-item">
-            <div class="item-image">Image Placeholder</div>
+        <div class="presentation-item">
             <div class="item-content">
                 <div class="item-title">Virtualizing Real World Learning Experiences with Digital Twins</div>
                 <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop, S. Wu</div>
                 <div class="item-venue"><i>TechConnect Word Conference</i> — University of California, Irvine ; Princeton University</div>
                 <div class="item-date">Poster and Invited Talk, J.W Marriot Austin | Jun 2025</div>
-                
                 <div class="item-links">
                     <a href="https://princeton.edu" target="_blank">🖼️ Poster</a>
                 </div>
             </div>
         </div>
 
-        <div class="research-item">
-            <div class="item-image">Image Placeholder</div>
+        <div class="presentation-item">
             <div class="item-content">
                 <div class="item-title">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</div>
                 <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
                 <div class="item-venue"><i>California Institute of Technology</i> — Kavli Nanoscience Institute</div>
                 <div class="item-date">Poster Presentation, Moore Courtyard | May 2025</div>
-                
                 <div class="item-links">
                     <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank">🖼️ Poster</a>
                 </div>
             </div>
         </div>
 
-        <div class="research-item">
-            <div class="item-image">Image Placeholder</div>
+        <div class="presentation-item">
             <div class="item-content">
                 <div class="item-title">AI For Education and Training</div>
                 <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Others</div>
                 <div class="item-venue"><i>Orange County Department of Education</i> — Future Leaders AI Conference</div>
                 <div class="item-date">Presentation, J.W Marriot | Nov 2024</div>
-                
                 <div class="item-links">
                     <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank">📊 Slides</a>
                 </div>
             </div>
         </div>
 
-        <div class="research-item">
-            <div class="item-image">Image Placeholder</div>
+        <div class="presentation-item">
             <div class="item-content">
                 <div class="item-title">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom</div>
                 <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
                 <div class="item-venue"><i>TechConnect World Innovation Conference</i> — XRAI for Training Symposium</div>
                 <div class="item-date">Poster presentation and panel, The Gaylord National Hotel | Jun 2024</div>
-                
                 <div class="item-links">
                     <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">🖼️ Poster</a>
                 </div>
             </div>
         </div>
 
-        <div class="research-item">
-            <div class="item-image">Image Placeholder</div>
+        <div class="presentation-item">
             <div class="item-content">
                 <div class="item-title">Digital Twins for Semiconductor Fabrication Education</div>
                 <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
                 <div class="item-venue"><i>California Institute of Technology</i> — Kavli Nanoscience Institute</div>
                 <div class="item-date">Poster and presentation, Moore Courtyard and EECS Bldg. | May 2024</div>
-                
                 <div class="item-links">
                     <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">🖼️ Poster</a>
                 </div>
             </div>
         </div>
 
-        <div class="research-item">
-            <div class="item-image">Image Placeholder</div>
+        <div class="presentation-item">
             <div class="item-content">
                 <div class="item-title">Empowering Students Through AI Clubs</div>
                 <div class="item-authors"><span class="author-highlight">Ishan Jha</span></div>
                 <div class="item-venue"><i>Orange County Department of Education</i> — Student AI Convening</div>
                 <div class="item-date">Presentation, J.W Marriot | May 2024</div>
-                
                 <div class="item-links">
                     <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank">📊 Slides</a>
                     <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank">🎥 Video</a>
@@ -415,7 +527,7 @@
     </div>
 
     <footer>
-        <p>Copyright &copy; 2025 Ishan Jha</p>
+        <p>Copyright &copy; 2026 Ishan Jha</p>
     </footer>
 
 </body>
