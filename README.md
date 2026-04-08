@@ -1,422 +1,422 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishan Jha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --blue: #2563eb; /* Replaced purple with a nice blue */
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-light: #f9f9f9;
+            --border-color: #eaeaea;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
         }
 
         body {
-            background: white;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
             line-height: 1.6;
-        }
-
-        /* Navigation */
-        .navbar {
             background: white;
-            border-bottom: 1px solid #e5e5e5;
-            padding: 1rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
         }
 
-        .navbar-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Header & Navigation */
+        header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
 
-        .nav-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #111;
-            text-decoration: none;
+        .header-title h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .subtitle {
+            color: var(--blue);
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
         }
 
         .nav-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.25rem;
+            font-size: 0.95rem;
+            margin-top: 1rem;
         }
 
-        .nav-link {
-            color: #555;
+        .nav-links a {
+            color: var(--text-muted);
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
-        .nav-link:hover {
-            color: #111;
+        .nav-links a:hover {
+            color: var(--blue);
         }
 
-        /* Main content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        /* Introduction */
+        /* Introduction Section */
         .intro {
-            margin-bottom: 3rem;
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+            margin-bottom: 4rem;
         }
 
-        .intro h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 1.5rem;
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
         }
 
-        .intro-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .intro-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
             color: #444;
-        }
-
-        .intro-content p {
-            margin-bottom: 1rem;
         }
 
         /* Sections */
         .section {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
-        .section h2 {
+        .section-header {
             font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
+            font-weight: 700;
             margin-bottom: 2rem;
+            position: relative;
+            padding-top: 1rem;
         }
 
-        /* Publication items */
-        .publication-item {
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
+        /* The colored bar above the section headers to match the template */
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            background-color: var(--blue);
         }
 
-        .publication-title {
-            font-size: 1.125rem;
+        /* Publication / Research Items */
+        .research-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-image {
+            width: 140px;
+            height: 100px;
+            background-color: var(--bg-light);
+            border-radius: 6px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .item-content {
+            flex-grow: 1;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
             font-weight: 600;
+            margin-bottom: 0.3rem;
             color: #111;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
         }
 
-        .publication-authors {
-            font-size: 1rem;
-            color: #111;
-            margin-bottom: 0.5rem;
+        .item-authors {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 0.3rem;
         }
 
         .author-highlight {
-            color: #ff1423;
-            font-weight: bold;
+            font-weight: 600;
+            color: var(--text-main);
         }
 
-        .publication-venue {
-            font-size: 1rem;
-            font-style: italic;
-            color: #111;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-institution {
-            font-size: 1rem;
-            font-style: italic;
-            color: #111;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-details {
-            font-size: 1rem;
-            color: #111;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-date {
-            font-size: 1rem;
-            color: #005A92;
-            margin-bottom: 1rem;
-        }
-
-        /* Abstract dropdown */
-        .abstract-container {
-            margin: 1rem 0;
-        }
-
-        .abstract-button {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #111;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .abstract-button:hover {
+        .item-venue {
+            font-size: 0.95rem;
             color: #555;
+            margin-bottom: 0.5rem;
         }
 
-        .chevron {
-            width: 16px;
-            height: 16px;
-            transition: transform 0.2s;
+        .item-venue i {
+            color: var(--text-muted);
         }
 
-        .chevron.rotated {
-            transform: rotate(180deg);
+        .item-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-family: monospace;
         }
 
-        .abstract-content {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        /* Native HTML5 Details/Summary for Abstract */
+        details {
+            margin-bottom: 0.75rem;
         }
 
-        .abstract-content.open {
-            max-height: 400px;
-            opacity: 1;
-            margin-top: 1rem;
+        summary {
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--blue);
+            display: inline-block;
         }
-
-        .abstract-text {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        /* Links */
-        .publication-links {
-            display: flex;
-            gap: 0.25rem;
-            font-size: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .link-bracket {
-            color: #111;
-        }
-
-        .publication-link {
-            color: #2563eb;
+        
+        summary:hover {
             text-decoration: underline;
         }
 
-        .publication-link:hover {
-            color: #1d4ed8;
+        .abstract-text {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--blue);
+        }
+
+        /* Links */
+        .item-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .item-links a {
+            font-size: 0.85rem;
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.2rem 0.5rem;
+            background: #eff6ff; /* Very light blue background */
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .item-links a:hover {
+            background: #dbeafe;
         }
 
         /* Footer */
-        .footer {
+        footer {
             margin-top: 4rem;
-            padding: 1.5rem;
-            background: #333;
-            color: white;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            border-radius: 10px;
-            margin-left: 1.5rem;
-            margin-right: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        .footer p {
-            font-weight: bold;
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .research-item {
+                flex-direction: column;
+            }
+
+            .item-image {
+                width: 100%;
+                height: 160px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="nav-links">
 
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank" class="nav-link">Google Scholar</a>
-                <a href="https://github.com/ishanyjha" target="_blank" class="nav-link">GitHub</a>
-
-            </div>
+    <header>
+        <div class="header-title">
+            <h1>Ishan Jha</h1>
+            <div class="subtitle">High School Student @ Troy High School</div>
         </div>
-    </nav>
+        <div class="nav-links">
+            <a href="projects.html">Projects</a>
+            <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank">Google Scholar</a>
+            <a href="https://github.com/ishanyjha" target="_blank">GitHub</a>
+        </div>
+    </header>
 
-    <div class="container">
-        <!-- Introduction -->
-        <section class="intro">
-            <h1>Welcome!</h1>
-            <div class="intro-content">
-                <p>Greetings, I am in 10th grade at Troy High School in Fullerton, California.</p>
-                <p>My passions are mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring the use and integration of diverse architectures to understand physical phenomenon and model complex processes.</p>
-                <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like minded people who are interested in AI, math, and the sciences!</p>
-            </div>
-        </section>
-
-        <!-- Publications Section -->
-        <section class="section">
-            <h2>Publications</h2>
-            
-            <div class="publication-item">
-                <div class="publication-title">AI-Powered VR Simulations for Semiconductor Industry Training and Education</div>
-                <div class="publication-authors"><span class="author-highlight">I. Jha</span>, G. Codina, A. Dong, K. Hong, A. Rodriguez, F. Chen, J. Zhu, G.P Li</div>
-                <div class="publication-venue">Journal of Advanced Technological Education</div>
-                <div class="publication-date">Accepted November 27, 2024</div>
-                
-                <div class="abstract-container">
-                    <button class="abstract-button" onclick="toggleAbstract('pub-1')">
-                        <span>abstract</span>
-                        <svg class="chevron" id="chevron-pub-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="abstract-content" id="abstract-pub-1">
-                        <div class="abstract-text">
-                            VR simulations hold great potential for training, and AI capabilities can scaffold the learning process through large language model (LLM) powered tutors that provide personalized responses to students. However, such training typically requires multidisciplinary teams of programmers, 3D artists, and instructional designers, and complex software such as game engines. If such advanced training could be created by less skilled users using simpler software, then a vast amount of quality training would become available to help address the workforce challenges. Here, we investigate whether it is feasible for community college and K-12 students to create such VR simulations. We describe how the students in the author group designed and created an AI-powered VR simulation for a common semiconductor fabrication process and pilot-tested it to evaluate its effectiveness. Pilot test results show that students reported high levels of engagement, ease of use, and increased interest in and knowledge of semiconductor manufacturing. Linear regression analysis of the data revealed that engagement, ease of use, knowledge increase, and interest increase are significant predictors of the desire to use VR training in the future. These findings show that given well-designed software tools and expert mentoring, a team of community college and K-12 students can successfully produce engaging and effective VR training simulations. Our work suggests a nationally scalable approach to addressing the semiconductor workforce challenge while also training the next generation of VR simulation developers. To our knowledge, this is the first time K-12 and community college students have developed and evaluated VR simulations with high efficiency and engagement.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://zenodo.org/records/14933891" target="_blank" class="publication-link">paper</a>
-                    <span class="link-bracket">] [</span>
-                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" target="_blank" class="publication-link">video demo</a>
-                    <span class="link-bracket">] [</span>
-                    <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank" class="publication-link">NSF feature</a>
-                    <span class="link-bracket">] [</span>
-                    <a href="https://launch.siminsights.com?s=f70bd167-3f04-4f28-8339-7ff5fab28807" target="_blank" class="publication-link">launch</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Presentations Section -->
-        <section class="section">
-            <h2>Presentations</h2>
-            
-            <div class="publication-item">
-                <div class="publication-title">Virtualizing Real World Learning Experiences with Digital Twins</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha, </span>K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop, S. Wu</div>
-                <div class="publication-venue">TechConnect Word Conference</div>
-                <div class="publication-institution">University of California, Irvine ; Princeton University</div>
-                <div class="publication-details">Poster and Invited Talk, J.W Marriot Austin</div>
-                <div class="publication-date">June 9-11, 2025</div>
-                
-
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://princeton.edu" target="_blank" class="publication-link">poster</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha,</span> Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
-                <div class="publication-venue">California Institute of Technology</div>
-                <div class="publication-institution">Kavli Nanoscience Institute</div>
-                <div class="publication-details">Poster Presentation, Moore Courtyard</div>
-                <div class="publication-date">May 30, 2025</div>
-                
-    
-
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank" class="publication-link">poster</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">AI For Education and Training</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span>, Others</div>
-                <div class="publication-venue">Orange County Department of Education</div>
-                <div class="publication-institution">Future Leaders AI Conference</div>
-                <div class="publication-details">Presentation, J.W Marriot</div>
-                <div class="publication-date">November 20, 2024</div>
-                
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank" class="publication-link">slides</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom.</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
-                <div class="publication-venue">TechConnect World Innovation Conference</div>
-                <div class="publication-institution">XRAI for Training Symposium</div>
-                <div class="publication-details">Poster presentation and panel, The Gaylord National Hotel</div>
-                <div class="publication-date">June 16-17, 2024</div>
-                
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="publication-link">poster</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Digital Twins for Semiconductor Fabrication Education.</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
-                <div class="publication-venue">California Institute of Technology</div>
-                <div class="publication-institution">Kavli Nanoscience Institute</div>
-                <div class="publication-details">Poster and presentation, Moore Courtyard and EECS Bldg.</div>
-                <div class="publication-date">May 24, 2024</div>
-                
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank" class="publication-link">poster</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Empowering Students Through AI Clubs</div>
-                <div class="publication-authors"><span class="author-highlight">Ishan Jha</span></div>
-                <div class="publication-venue">Orange County Department of Education</div>
-                <div class="publication-institution">Student AI Convening</div>
-                <div class="publication-details">Presentation, J.W Marriot</div>
-                <div class="publication-date">May 4, 2024</div>
-                
-                <div class="publication-links">
-                    <span class="link-bracket">[</span>
-                    <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank" class="publication-link">slides</a>
-                    <span class="link-bracket">] [</span>
-                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank" class="publication-link">video</a>
-                    <span class="link-bracket">]</span>
-                </div>
-            </div>
-        </section>
+    <div class="intro">
+        <img src="placeholder.jpg" alt="Ishan Jha" class="profile-pic">
+        
+        <div class="intro-text">
+            <p>Greetings, I am in 10th grade at Troy High School in Fullerton, California.</p>
+            <p>My passions are mathematics, artificial intelligence, and its applications. Within artificial intelligence, I am currently exploring the use and integration of diverse architectures to understand physical phenomenon and model complex processes.</p>
+            <p>Another passion of mine is conducting academic research, helping students with math at the UCI Math Circle, and presenting at conferences in AI. I love connecting with like-minded people who are interested in AI, math, and the sciences!</p>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <div class="section">
+        <h2 class="section-header">Publications</h2>
+        
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">AI-Powered VR Simulations for Semiconductor Industry Training and Education</div>
+                <div class="item-authors"><span class="author-highlight">I. Jha</span>, G. Codina, A. Dong, K. Hong, A. Rodriguez, F. Chen, J. Zhu, G.P Li</div>
+                <div class="item-venue"><i>Journal of Advanced Technological Education</i></div>
+                <div class="item-date">Accepted Nov 2024</div>
+                
+                <details>
+                    <summary>Abstract</summary>
+                    <div class="abstract-text">
+                        VR simulations hold great potential for training, and AI capabilities can scaffold the learning process through large language model (LLM) powered tutors that provide personalized responses to students. However, such training typically requires multidisciplinary teams of programmers, 3D artists, and instructional designers, and complex software such as game engines. If such advanced training could be created by less skilled users using simpler software, then a vast amount of quality training would become available to help address the workforce challenges. Here, we investigate whether it is feasible for community college and K-12 students to create such VR simulations. We describe how the students in the author group designed and created an AI-powered VR simulation for a common semiconductor fabrication process and pilot-tested it to evaluate its effectiveness. Pilot test results show that students reported high levels of engagement, ease of use, and increased interest in and knowledge of semiconductor manufacturing. Linear regression analysis of the data revealed that engagement, ease of use, knowledge increase, and interest increase are significant predictors of the desire to use VR training in the future. These findings show that given well-designed software tools and expert mentoring, a team of community college and K-12 students can successfully produce engaging and effective VR training simulations. Our work suggests a nationally scalable approach to addressing the semiconductor workforce challenge while also training the next generation of VR simulation developers. To our knowledge, this is the first time K-12 and community college students have developed and evaluated VR simulations with high efficiency and engagement.
+                    </div>
+                </details>
+
+                <div class="item-links">
+                    <a href="https://zenodo.org/records/14933891" target="_blank">📄 Paper</a>
+                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" target="_blank">🎥 Video Demo</a>
+                    <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank">📰 NSF Feature</a>
+                    <a href="https://launch.siminsights.com?s=f70bd167-3f04-4f28-8339-7ff5fab28807" target="_blank">🚀 Launch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-header">Presentations</h2>
+        
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Virtualizing Real World Learning Experiences with Digital Twins</div>
+                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop, S. Wu</div>
+                <div class="item-venue"><i>TechConnect Word Conference</i> — University of California, Irvine ; Princeton University</div>
+                <div class="item-date">Poster and Invited Talk, J.W Marriot Austin | Jun 2025</div>
+                
+                <div class="item-links">
+                    <a href="https://princeton.edu" target="_blank">🖼️ Poster</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</div>
+                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
+                <div class="item-venue"><i>California Institute of Technology</i> — Kavli Nanoscience Institute</div>
+                <div class="item-date">Poster Presentation, Moore Courtyard | May 2025</div>
+                
+                <div class="item-links">
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank">🖼️ Poster</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">AI For Education and Training</div>
+                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Others</div>
+                <div class="item-venue"><i>Orange County Department of Education</i> — Future Leaders AI Conference</div>
+                <div class="item-date">Presentation, J.W Marriot | Nov 2024</div>
+                
+                <div class="item-links">
+                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank">📊 Slides</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom</div>
+                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
+                <div class="item-venue"><i>TechConnect World Innovation Conference</i> — XRAI for Training Symposium</div>
+                <div class="item-date">Poster presentation and panel, The Gaylord National Hotel | Jun 2024</div>
+                
+                <div class="item-links">
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">🖼️ Poster</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Digital Twins for Semiconductor Fabrication Education</div>
+                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
+                <div class="item-venue"><i>California Institute of Technology</i> — Kavli Nanoscience Institute</div>
+                <div class="item-date">Poster and presentation, Moore Courtyard and EECS Bldg. | May 2024</div>
+                
+                <div class="item-links">
+                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">🖼️ Poster</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="item-image">Image Placeholder</div>
+            <div class="item-content">
+                <div class="item-title">Empowering Students Through AI Clubs</div>
+                <div class="item-authors"><span class="author-highlight">Ishan Jha</span></div>
+                <div class="item-venue"><i>Orange County Department of Education</i> — Student AI Convening</div>
+                <div class="item-date">Presentation, J.W Marriot | May 2024</div>
+                
+                <div class="item-links">
+                    <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank">📊 Slides</a>
+                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank">🎥 Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
         <p>Copyright &copy; 2025 Ishan Jha</p>
     </footer>
 
-    <script>
-        function toggleAbstract(id) {
-            const abstractContent = document.getElementById('abstract-' + id);
-            const chevron = document.getElementById('chevron-' + id);
-            
-            if (abstractContent.classList.contains('open')) {
-                abstractContent.classList.remove('open');
-                chevron.classList.remove('rotated');
-            } else {
-                abstractContent.classList.add('open');
-                chevron.classList.add('rotated');
-            }
-        }
-    </script>
 </body>
 </html>
