@@ -177,6 +177,15 @@
             color: #aaa;
             font-size: 0.8rem;
             border: 1px solid var(--border-color);
+            overflow: hidden; /* Ensures child images stay within rounded corners */
+        }
+
+        /* Ensure images inside research items fill the box perfectly */
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0; /* Overrides any errant profile-pic classes */
         }
 
         /* Presentation List Items (No Images) */
