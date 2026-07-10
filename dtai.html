@@ -40,6 +40,7 @@
         .top-nav {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 2rem;
             padding: 1rem 0;
             max-width: 1000px;
@@ -190,7 +191,7 @@
 
         /* Video blocks: video -> caption, stacked */
         .video-block {
-            margin-bottom: 3rem;
+            margin-bottom: 1.75rem;
         }
 
         .video-block:last-child {
@@ -258,6 +259,154 @@
             text-decoration: underline;
         }
 
+        /* --- Narrative / journey additions --- */
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin: 2rem 0 0.5rem 0;
+            padding-top: 0.5rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding: 0 0.5rem;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-body);
+            border: 2px solid var(--theme-color);
+            margin: 0 auto 0.9rem auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item.is-future .timeline-dot {
+            border-style: dashed;
+            border-color: var(--text-muted);
+        }
+
+        .timeline-phase {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .timeline-inst {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            margin-bottom: 0.15rem;
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .phase-block {
+            margin-bottom: 3rem;
+        }
+
+        .phase-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .phase-heading {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .phase-heading h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .phase-heading .phase-dates {
+            font-size: 0.85rem;
+            color: var(--theme-color);
+            font-weight: 600;
+        }
+
+        .status-note {
+            border-left: 3px solid var(--theme-color);
+            padding: 0.6rem 1rem;
+            margin: 0.75rem 0 1.25rem 0;
+            font-size: 0.88rem;
+            font-style: italic;
+            color: var(--text-muted);
+            background: var(--placeholder-bg);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .ecosystem-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .ecosystem-table th,
+        .ecosystem-table td {
+            text-align: left;
+            padding: 0.6rem 0.9rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .ecosystem-table th {
+            font-weight: 700;
+            background: var(--placeholder-bg);
+            width: 30%;
+        }
+
+        .future-list {
+            list-style: none;
+        }
+
+        .future-list li {
+            padding: 0.7rem 0 0.7rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .future-list li:last-child {
+            border-bottom: none;
+        }
+
+        .future-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: var(--theme-color);
+            font-weight: 700;
+        }
+
+        .future-list strong {
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             .overview-flex {
@@ -266,6 +415,16 @@
             }
             .paper-title {
                 font-size: 1.5rem;
+            }
+            .timeline {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .timeline::before {
+                display: none;
+            }
+            .ecosystem-table th {
+                width: 40%;
             }
         }
     </style>
@@ -276,7 +435,9 @@
         <nav class="top-nav">
             <a href="https://ishanyjha.github.io">Home</a>
             <a href="#overview">Overview</a>
-            <a href="#demos">Demos</a>
+            <a href="#journey">Journey</a>
+            <a href="#approach">Approach</a>
+            <a href="#future">Future Work</a>
             <a href="#citation">Citation</a>
         </nav>
     </div>
@@ -310,50 +471,156 @@
             <div class="overview-flex">
                 <div class="overview-text">
                     <p>
-                        We present a bi-coastal, multi-institution digital twin and AI educational platform (DT/AI) for advanced microelectronics fabrication and device packaging training, developed by a collaborative spanning UC Irvine, Mercer County Community College, and Princeton University.
+                        We present a bi-coastal, multi-institution digital twin and AI educational platform (DT/AI) for advanced microelectronics fabrication and device packaging training, developed by a collaboration spanning UC Irvine, Mercer County Community College, and Princeton University.
                     </p>
                     <p>
                         This Phase-2 effort extends our earlier AI-powered VR simulation framework with enhanced lithography and advanced device packaging modules, high-fidelity equipment emulations, facility-specific SOP adherence, a parallel fabricated chip-under-test with I/O verification, and tightly-coupled agentic AI engines that personalize each learner's training session.
                     </p>
+                    <p>
+                        The sections below place this paper in the context of the broader, multi-year initiative it belongs to, and preview where the work is headed next.
+                    </p>
                 </div>
                 <div class="overview-visual">
-                    <img src="!!!!123AAAABCDEFG.png" alt="Platform overview" style="width:100%; border:1px solid var(--border-color); border-radius:6px;">
+                    <div class="placeholder">
+                        <span class="ph-icon">&#9634;</span>
+                        <span>Platform overview visual — coming soon</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="demos">
-            <h2 class="section-header">Video Demonstrations</h2>
+        <section class="section" id="community">
+            <h2 class="section-header">A growing community of practice</h2>
+            <p>
+                This paper describes Phase 2 of a multi-year, multi-institution effort to make high-fidelity digital twins of real fabrication and packaging facilities available for semiconductor workforce training — and it neither started nor ends here.
+            </p>
+            <p>
+                Phase 1 began in 2024 at UC Irvine's Integrated Nanosystems Research Facility (INRF), where a team of high school and community college students demonstrated that a fully AI-tutored VR simulation of a cleanroom process could be designed, built, and evaluated by students themselves, using no-code authoring tools rather than a professional development team (Jha et al., 2025). That early result, and the interest it drew from other institutions, is what led directly to the bi-coastal collaboration described in this paper. Phase 3 is already underway: researchers at Caltech's Kavli Nanoscience Institute are extending the same approach to a frontier etch process with the Minnich Group, discussed further below.
+            </p>
+            <p>
+                What ties these efforts together is not only a shared subject, but a shared way of working: a common development methodology (TC4 — Capture, Create, Categorize, Customize), a shared 3D asset library, consistent evaluation instruments across cohorts, and open publication that lets each new institution build on what came before rather than starting over.
+            </p>
 
-            <div class="video-block">
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/Y-WAhBCO_hw"
-                            title="UCI"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+            <div class="timeline" role="list" aria-label="Project timeline">
+                <div class="timeline-item" role="listitem">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-phase">Phase 1</div>
+                    <div class="timeline-inst">UC Irvine + PCC</div>
+                    <div class="timeline-date">2024 – 2025</div>
                 </div>
-                <p class="video-caption"><strong>UC Irvine</strong> Photolithography workflow inside the digital twin cleanroom.</p>
+                <div class="timeline-item" role="listitem">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-phase">Phase 2</div>
+                    <div class="timeline-inst">Princeton + MCCC</div>
+                    <div class="timeline-date">2025 – 2026</div>
+                </div>
+                <div class="timeline-item" role="listitem">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-phase">Phase 3</div>
+                    <div class="timeline-inst">Caltech KNI</div>
+                    <div class="timeline-date">2026 – present</div>
+                </div>
+                <div class="timeline-item is-future" role="listitem">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-phase">Future</div>
+                    <div class="timeline-inst">More institutions</div>
+                    <div class="timeline-date">Ongoing</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="journey">
+            <h2 class="section-header">The journey so far</h2>
+
+            <div class="phase-block">
+                <div class="phase-heading">
+                    <h3>Phase 1 — UC Irvine &amp; Pasadena City College</h3>
+                    <span class="phase-dates">2024 – 2025</span>
+                </div>
+                <p>
+                    Working from six months of guided tours through UC Irvine's INRF cleanroom, a team of high school and community college students designed and built an AI-tutored VR simulation of the UV photolithography process using no-code authoring tools. A pilot test with 29 participants found that engagement — more than ease of use, knowledge gain, or interest change — was the strongest predictor of whether someone wanted to use more VR training in the future. The work was presented at Caltech in May 2024 and at the TechConnect World Conference the following month, drawing interest from three additional colleges.
+                </p>
+                <div class="video-block">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/Y-WAhBCO_hw"
+                                title="UCI"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption"><strong>UC Irvine</strong> Photolithography workflow inside the digital twin cleanroom.</p>
+                </div>
             </div>
 
-            <div class="video-block">
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/gu7tE6ejHQI"
-                            title="Princeton University and Mercer County CC"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+            <div class="phase-block">
+                <div class="phase-heading">
+                    <h3>Phase 2 — Princeton University &amp; Mercer County Community College</h3>
+                    <span class="phase-dates">2025 – 2026</span>
                 </div>
-                <p class="video-caption"><strong>Princeton University and Mercer CC</strong> Lamination workflow with high-fidelity equipment emulation.</p>
+                <p>
+                    This paper reports the resulting bi-coastal collaboration: UC Irvine and Pasadena City College were joined by Mercer County Community College and Princeton University's Materials Institute to extend the platform to advanced device packaging and to formalize a shared development methodology (TC4 — Capture, Create, Categorize, Customize). Princeton fabricated physical test chips, including one built with an intentional defect, and validated them against a custom test board — closing a real loop between the digital twin and a physical device. A second learner cohort (n = 37), using the AI-enhanced platform, independently reproduced the original finding that engagement drives future interest in the training, at a comparable effect size.
+                </p>
+                <div class="video-block">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/gu7tE6ejHQI"
+                                title="Princeton University and Mercer County CC"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption"><strong>Princeton University and Mercer CC</strong> Lamination workflow with high-fidelity equipment emulation.</p>
+                </div>
             </div>
 
-            <div class="video-block">
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/hWTCraE1mxk"
-                            title="Caltech"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+            <div class="phase-block">
+                <div class="phase-heading">
+                    <h3>Phase 3 — Caltech, Kavli Nanoscience Institute</h3>
+                    <span class="phase-dates">2026 – present</span>
                 </div>
-                <p class="video-caption"><strong>Caltech</strong> Wet etching workflow with the Kavli Nanoscience Institute.</p>
+                <p>
+                    The most recent extension is underway at Caltech's Kavli Nanoscience Institute, where the same approach is being applied to wet-etching and advanced etch process workflows in collaboration with the Minnich Group. Unlike the largely standardized processes modeled in Phases 1 and 2, this work targets an active area of research rather than a settled teaching procedure — extending the platform from training newcomers toward onboarding researchers onto live equipment.
+                </p>
+                <div class="status-note">
+                    This phase is ongoing and has not yet been published as a paper; the demonstration below reflects work in progress.
+                </div>
+                <div class="video-block">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/hWTCraE1mxk"
+                                title="Caltech"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption"><strong>Caltech</strong> Wet etching workflow with the Kavli Nanoscience Institute.</p>
+                </div>
             </div>
+        </section>
+
+        <section class="section" id="approach">
+            <h2 class="section-header">Why this approach</h2>
+            <p>
+                Across all three phases, the people being trained and the people building the training have substantially overlapped. Students did not simply test someone else's software: they toured the facilities, authored the instructional scripts, modeled the 3D assets, and built the simulation logic themselves. That produces two outcomes from a single effort — a training tool, and a cohort of students with direct experience in VR development, instructional design, and applied AI, which are themselves among the skills the semiconductor workforce is short of.
+            </p>
+            <p>
+                The project has also tried to earn its claims rather than assume them. Beyond validated survey instruments, the team explicitly classified its system as an analytical digital twin operating under human oversight, with periodic rather than continuous data synchronization — a deliberately conservative claim relative to industrial real-time twins. And rather than relying on a single pilot, the core finding that engagement drives adoption was tested a second time, independently, in a different cohort using an upgraded system, and it held.
+            </p>
+            <p>
+                The result, across every phase, is a training tool that a handful of students and a few months of facility access can build, at a fraction of the cost of a professional studio production, and with meaningfully wider access to specific, otherwise hard-to-reach facilities.
+            </p>
+
+            <table class="ecosystem-table">
+                <tr><th>Funder</th><td>NSF Advanced Technological Education program, Micro Nano Technology Education Center (Award #2000281)</td></tr>
+                <tr><th>Academic sites</th><td>UC Irvine (INRF), Pasadena City College, Mercer County Community College, Princeton University (Materials Institute), Caltech (Kavli Nanoscience Institute)</td></tr>
+                <tr><th>Platform &amp; tools</th><td>SimInsights HyperSkill, Blender, Unity, AWS S3, OpenAI</td></tr>
+                <tr><th>People</th><td>Student developers, faculty mentors, cleanroom and lab technicians, learner cohorts</td></tr>
+            </table>
+        </section>
+
+        <section class="section" id="future">
+            <h2 class="section-header">Future directions</h2>
+            <ul class="future-list">
+                <li><strong>Complete the chip's lifecycle</strong>Link front-end fabrication, packaging, and advanced process modules into one traversable journey across all three facilities.</li>
+                <li><strong>Adaptive, personalized tutoring</strong>Extend the agentic AI to adjust pacing and hints to individual learner history rather than a single fixed script.</li>
+                <li><strong>Grow the network</strong>Publish the TC4 methodology and shared asset library as an open toolkit, and add an industry advisory board to help prioritize future modules.</li>
+                <li><strong>Close the transfer-of-training loop</strong>Partner with employers and fabs to test whether trained learners ramp faster or make fewer errors on real equipment.</li>
+            </ul>
         </section>
 
         <section class="section" id="citation">
