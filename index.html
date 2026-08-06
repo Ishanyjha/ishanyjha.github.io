@@ -2,21 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Ishan Jha</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- al-folio loads Roboto + Roboto Slab from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style> 
+
+    <style>
+        /* ==========================================================
+           Theme variables (al-folio structure, blue instead of purple)
+           ========================================================== */
         :root {
-            --theme-link: #1772d0; 
-            --theme-hover: #0f5ba6;
-            --text-main: #000000; 
-            --text-muted: #666666;
-            --bg-body: #ffffff;
-            --border-color: #eeeeee; 
+            --global-bg-color: #ffffff;
+            --global-text-color: #000000;
+            --global-text-color-light: #828282;
+            --global-theme-color: #1772d0;   /* was purple in al-folio */
+            --global-hover-color: #0f5ba6;
+            --global-divider-color: rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -25,239 +31,345 @@
             padding: 0;
         }
 
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px;
-            color: var(--text-main);
-            line-height: 1.4;
-            background: var(--bg-body);
+            /* al-folio's base stack: system UI first, Roboto as the web fallback */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--global-text-color);
+            background-color: var(--global-bg-color);
+            padding-top: 56px;
+            padding-bottom: 2rem;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 1rem;
         }
 
         a {
-            color: var(--theme-link); 
-            text-decoration: none; 
-            transition: color 0.2s ease-in-out; 
+            color: var(--global-theme-color);
+            text-decoration: none;
         }
-        
-        a:hover {
-            text-decoration: underline; 
+
+        a:hover,
+        a:focus-visible {
+            color: var(--global-hover-color);
+            text-decoration: underline;
         }
 
         p {
             margin-bottom: 1rem;
-            text-align: left; 
         }
 
-  
-        .top-nav {
+        h1, h2, h3 {
+            font-weight: 500;
+            line-height: 1.2;
+            scroll-margin-top: 72px;
+        }
+
+        /* ==========================================================
+           Fixed top navigation
+           ========================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background-color: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: saturate(180%) blur(8px);
+            backdrop-filter: saturate(180%) blur(8px);
+            border-bottom: 1px solid var(--global-divider-color);
+            z-index: 1000;
+        }
+
+        .navbar .container {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
         }
 
-        .top-nav a {
-            color: var(--text-muted);
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--global-text-color);
+            font-size: 1rem;
             font-weight: 400;
         }
 
-        .top-nav a:hover {
-            color: var(--text-main);
+        .nav-link:hover {
+            color: var(--global-theme-color);
             text-decoration: none;
         }
 
-
-        .intro-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 3rem;
+        .nav-item.active .nav-link {
+            font-weight: 700;
         }
 
-        .intro-text {
-            flex: 2;
+        /* ==========================================================
+           About header + profile
+           ========================================================== */
+        .post-header {
+            margin: 3rem 0 1.5rem;
         }
 
-        .intro-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .intro-name {
-            font-size: 1.98rem;
+        .post-title {
+            font-size: 2.5rem;
             font-weight: 400;
-            margin-bottom: 1rem;
-            color: #000;
-            text-align: center;
+            letter-spacing: -0.5px;
         }
 
-        .social-icons {
-            text-align: center;
-            margin-top: 1.5rem;
-            font-size: 1.5rem;
+        .post-title strong {
+            font-weight: 700;
         }
 
-        .social-icons a {
-            color: var(--theme-link);
-            margin: 0 10px;
-            transition: color 0.2s ease;
+        .post-description {
+            margin-top: 0.4rem;
+            font-size: 1.15rem;
+            color: var(--global-text-color-light);
         }
 
-
-        .profile-pic {
-            width: 100%;
+        .profile {
+            float: right;
+            width: 34%;
             max-width: 250px;
-            aspect-ratio: 1 / 1; 
+            margin: 0.25rem 0 1.5rem 2rem;
+        }
+
+        .profile img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
             border-radius: 50%;
             object-fit: cover;
         }
 
-        /* Section Headers */
-        h2 {
-            font-size: 1.11rem;
-            font-weight: 400;
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            color: #000;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
         }
 
-        /* News List */
-        .news-list {
-            margin-bottom: 2rem;
+        /* ==========================================================
+           Section headings
+           ========================================================== */
+        h2.section-title {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin: 2.75rem 0 1.25rem;
         }
 
-        .news-item {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.89rem;
+        h2.section-title a {
+            color: inherit;
         }
 
-        .news-date {
-            flex: 0 0 80px;
-            font-weight: 700;
-            color: var(--text-muted);
-        }
-
-        .news-content {
-            flex: 1;
-        }
-
-    
-        .item-row {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 2.5rem;
-            align-items: flex-start;
-        }
-
-        .item-image {
-            flex: 0 0 160px; 
-        }
-
-        .item-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        .item-content {
-            flex: 1;
-        }
-
-        
-        .item-title {
-            font-size: 0.87rem;
-            font-weight: 700;
-            margin-bottom: 0.1rem;
-            line-height: 1.3;
-        }
-        
-        .item-title a {
-            color: var(--theme-link);
+        h2.section-title a:hover {
+            color: var(--global-theme-color);
             text-decoration: none;
         }
-        
-        .item-title a:hover {
-            text-decoration: underline;
+
+        /* ==========================================================
+           News table
+           ========================================================== */
+        table.news {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
         }
 
-        /* Authors Styling */
-        .item-authors {
-            font-size: 0.84rem;
-            margin-bottom: 0.1rem;
-            color: var(--text-main);
-        }
-
-        .author-highlight {
+        table.news th {
+            width: 1%;
+            white-space: nowrap;
+            text-align: left;
+            vertical-align: top;
             font-weight: 700;
-            color: var(--text-main);
+            font-size: 0.95rem;
+            padding: 0.35rem 1rem 0.35rem 0;
         }
 
-        /* Venue Styling */
-        .item-venue {
-            font-size: 0.84rem;
-            font-style: italic;
-            margin-bottom: 0.1rem;
-            color: var(--text-main);
+        table.news td {
+            vertical-align: top;
+            font-size: 0.95rem;
+            padding: 0.35rem 0;
         }
-        
-        .item-venue span.date {
+
+        /* ==========================================================
+           Bibliography (publications) and talks
+           ========================================================== */
+        ol.bibliography {
+            list-style: none;
+            counter-reset: bib;
+            padding-left: 0;
+        }
+
+        ol.bibliography > li {
+            counter-increment: bib;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2.25rem;
+        }
+
+        ol.bibliography > li::before {
+            content: counter(bib) ".";
+            flex: 0 0 1.1rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .preview {
+            flex: 0 0 150px;
+        }
+
+        .preview img {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--global-divider-color);
+            border-radius: 3px;
+        }
+
+        .entry-body {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .title {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .title a {
+            color: var(--global-text-color);
+        }
+
+        .title a:hover {
+            color: var(--global-theme-color);
+            text-decoration: none;
+        }
+
+        .author {
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .author .self {
             font-style: normal;
-            font-weight: 400;
-            color: var(--text-main); 
+            border-bottom: 1px solid var(--global-text-color);
         }
 
-        /* Links Styling */
-        .item-links {
-            font-size: 0.824rem;
-            margin-bottom: 0.4rem;
+        .periodical {
+            font-size: 0.95rem;
+            font-style: italic;
         }
 
-        /* Abstract Styling */
-        .item-abstract {
-            font-size: 0.80rem;
-            color: var(--text-main); 
-            margin-top: 0.4rem;
-            text-align: left; 
+        .links {
+            margin-top: 0.55rem;
         }
 
-        /* Footer */
-        footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
+        .links a.btn {
+            display: inline-block;
+            font-size: 0.75rem;
+            line-height: 1.3;
+            padding: 0.22rem 0.75rem;
+            margin: 0 0.3rem 0.35rem 0;
+            color: var(--global-text-color);
+            border: 1px solid var(--global-text-color);
+            border-radius: 0.2rem;
+        }
+
+        .links a.btn:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+            text-decoration: none;
+        }
+
+        .talks .entry {
+            margin-bottom: 1.75rem;
+        }
+
+        /* ==========================================================
+           Social icons + footer
+           ========================================================== */
+        .social {
             text-align: center;
-            color: var(--text-muted);
-            font-size: 0.8rem;
+            margin: 2rem 0 0.5rem;
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .intro-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 2rem;
+        .social .contact-icons {
+            font-size: 1.4rem;
+        }
+
+        .social .contact-icons a {
+            color: var(--global-text-color);
+            margin: 0 0.4rem;
+        }
+
+        .social .contact-icons a:hover {
+            color: var(--global-theme-color);
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--global-divider-color);
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--global-text-color-light);
+        }
+
+        /* ==========================================================
+           Responsive
+           ========================================================== */
+        @media (max-width: 700px) {
+            .navbar-nav {
+                gap: 0.9rem;
             }
-            .intro-text p {
-                text-align: left;
+
+            .nav-link {
+                font-size: 0.9rem;
             }
-            .item-row {
-                flex-direction: column;
-                gap: 15px;
+
+            .post-title {
+                font-size: 2rem;
             }
-            .item-image {
-                flex: none;
-                width: 100%;
+
+            .profile {
+                float: none;
+                width: 60%;
                 max-width: 200px;
-                margin: 0 auto;
+                margin: 0 auto 1.5rem;
+            }
+
+            ol.bibliography > li {
+                flex-wrap: wrap;
+            }
+
+            .preview {
+                flex: 0 0 100%;
+                max-width: 200px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
             }
         }
     </style>
@@ -265,204 +377,179 @@
 <body>
 
     <!-- TOP NAVIGATION -->
-    <nav class="top-nav">
-        <a href="#news">News</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#presentations">Presentations</a>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#top">about</a></li>
+                <li class="nav-item"><a class="nav-link" href="#news">news</a></li>
+                <li class="nav-item"><a class="nav-link" href="#publications">publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#talks">talks</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- INTRO SECTION -->
-    <div class="intro-container">
-        <div class="intro-text">
-            <h1 class="intro-name">Ishan Jha</h1>
-            
-            <p>Greetings! I am a 10th grade student at Troy High School in Fullerton, and in the computer science diploma program. I am interested in using math and AI to model scientific processes and systems.</p>
-            <p>I have worked with the <a href="https://micronanoeducation.org" target="_blank">Micro-Nano Technology Education Center</a> and <a href="https://www.calit2.uci.edu" target="_blank"> California Institute for Telecommunications and Information Technology</a> (CalIT2) the to develop <a href="https://en.wikipedia.org/wiki/Simulations_and_games_in_industry_education" target="_blank">digital twins</a> of the semiconductor cleanroom at UC Irvine. I later expanded this work with the <a href="https://materials.princeton.edu" target="_blank">Princeton Materials Institute</a> to develop high fidelity simulations of their device packaging processes, and I am currently collaborating with Caltech to build similar DT systems. In 2024, I addressed senior members of the Federal Government at a roundtable at the White House regarding my work in semicondcutor manufacturing simulations.</p>
-            <p>I am an advocate for the safe application of AI. In 2023, I was named <a href="https://ocde.us/Pages/Home.aspx" target="_blank">OC AI Ambassador</a> and have since spoken at various panels and conferences on AI in education.</p>
+    <div class="container" id="top">
 
-           
-            <div class="social-icons">
-                <a href="mailto:ishanyjha@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                <a href="https://github.com/ishanyjha" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ishan-j-871094354/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://orcid.org/0009-0009-4202-9139" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+        <!-- ABOUT -->
+        <article>
+            <div class="post-header">
+                <h1 class="post-title"><strong>Ishan</strong> Jha</h1>
             </div>
-        </div>
-        
-        <div class="intro-image">
-            <img src="IMG_1922.jpeg" alt="Ishan Jha" class="profile-pic">
-        </div>
+
+            <div class="profile">
+                <img src="IMG_1922.jpeg" alt="Ishan Jha">
+            </div>
+
+            <div class="post-content clearfix">
+                <p>Greetings! I am a 10th grade student at Troy High School in Fullerton, and in the computer science diploma program. I am interested in using math and AI to model scientific processes and systems.</p>
+
+                <p>I have worked with the <a href="https://micronanoeducation.org" target="_blank">Micro-Nano Technology Education Center</a> and <a href="https://www.calit2.uci.edu" target="_blank">California Institute for Telecommunications and Information Technology</a> (CalIT2) to develop <a href="https://en.wikipedia.org/wiki/Simulations_and_games_in_industry_education" target="_blank">digital twins</a> of the semiconductor cleanroom at UC Irvine. I later expanded this work with the <a href="https://materials.princeton.edu" target="_blank">Princeton Materials Institute</a> to develop high fidelity simulations of their device packaging processes, and I am currently collaborating with Caltech to build similar DT systems. In 2024, I addressed senior members of the Federal Government at a roundtable at the White House regarding my work in semiconductor manufacturing simulations.</p>
+
+                <p>I am an advocate for the safe application of AI. In 2023, I was named <a href="https://ocde.us/Pages/Home.aspx" target="_blank">OC AI Ambassador</a> and have since spoken at various panels and conferences on AI in education.</p>
+            </div>
+
+            <div class="social">
+                <div class="contact-icons">
+                    <a href="mailto:ishanyjha@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://scholar.google.com/citations?user=KJxBoMAAAAAJ&hl=en&" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+                    <a href="https://github.com/ishanyjha" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ishan-j-871094354/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://orcid.org/0009-0009-4202-9139" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+                </div>
+            </div>
+
+            <!-- NEWS -->
+            <h2 class="section-title" id="news">recent highlights</h2>
+            <table class="news">
+                <tbody>
+                    <tr>
+                        <th scope="row">Jun 2026</th>
+                        <td>Presented our 1st place winning orbital space settlement design <a href="https://drive.google.com/file/d/1yrLhhtL4hJG6lbQ-jq8W8Y3J7CUIvzwR/view?usp=sharing" target="_blank">Ad Astra</a> at the <a href="https://nss.org/nss-space-settlement-contest" target="_blank">International Space Development Conference</a>!</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Apr 2026</th>
+                        <td><b>Gradient Entropy Regularization</b> has been accepted as a poster presentation at the SIAM <a href="https://www.socams.org/" target="_blank">Southern California Applied Mathematics Symposium</a> at LMU.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mar 2026</th>
+                        <td>My project <b>Gradient Entropy Regularization for Physics-Constrained Solving of Partial Differential Equations</b> won 3rd Place in Mathematics at the <a href="https://ocsef.org/fair/awards" target="_blank">Orange County Science and Engineering Fair</a>!</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mar 2026</th>
+                        <td>Our latest <a href="https://zenodo.org/records/19241366" target="_blank">paper</a> has been accepted to JATE.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- PUBLICATIONS -->
+            <h2 class="section-title" id="publications">publications</h2>
+            <ol class="bibliography">
+                <li>
+                    <div class="preview">
+                        <img src="snip.JPG" alt="Paper Thumbnail">
+                    </div>
+                    <div class="entry-body">
+                        <div class="title"><a href="https://zenodo.org/records/19241366" target="_blank">A Multi-Institutional Digital Twin and AI Educational Platform for Advanced Microelectronics Fabrication and Device Packaging Training</a></div>
+                        <div class="author">Kristal Hong, <em class="self">Ishan Jha</em>, Abubaker Ahmadi, Peter Stout, G.P. Li, Bert Harrop, Alex Norman</div>
+                        <div class="periodical">Journal of Advanced Technological Education, 2026</div>
+                        <div class="links">
+                            <a class="btn" href="https://zenodo.org/records/19241366" target="_blank">paper</a>
+                            <a class="btn" href="https://ishanyjha.github.io/dtai.html" target="_blank">project page</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="preview">
+                        <img src="Visual1.png" alt="Paper Thumbnail">
+                    </div>
+                    <div class="entry-body">
+                        <div class="title"><a href="https://zenodo.org/records/14933891" target="_blank">AI-Powered VR Simulations for Semiconductor Industry Training and Education</a></div>
+                        <div class="author"><em class="self">Ishan Jha</em>, Gabriel Codina, Alice Dong, Kristal Hong, Alexis Rodriguez, Felicia Chen, Jocelyn Zhu, G.P. Li</div>
+                        <div class="periodical">Journal of Advanced Technological Education, 2024</div>
+                        <div class="links">
+                            <a class="btn" href="https://zenodo.org/records/14933891" target="_blank">paper</a>
+                            <a class="btn" href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" target="_blank">video</a>
+                            <a class="btn" href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank">nsf feature</a>
+                            <a class="btn" href="https://launch.siminsights.com?s=f70bd167-3f04-4f28-8339-7ff5fab28807" target="_blank">launch</a>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- TALKS -->
+            <h2 class="section-title" id="talks">talks</h2>
+            <div class="talks">
+                <div class="entry">
+                    <div class="title">Maximum Entropy Regularization for Gradient Pathology Mitigation in Physics-Informed Neural PDE Solvers</div>
+                    <div class="author"><em class="self">Ishan Jha</em></div>
+                    <div class="periodical">Society for Industrial and Applied Mathematics, Applied Mathematics Symposium, Jun 2025</div>
+                    <div class="links">
+                        <a class="btn" href="https://www.socams.org/schedule" target="_blank">abstract</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="title">Virtualizing Real World Learning Experiences with Digital Twins</div>
+                    <div class="author"><em class="self">Ishan Jha</em>, K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop, S. Wu</div>
+                    <div class="periodical">TechConnect Word Conference, AI for Modelling &amp; Simulation Symposium, Jun 2025</div>
+                    <div class="links">
+                        <a class="btn" href="https://princeton.edu" target="_blank">poster</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="title">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</div>
+                    <div class="author"><em class="self">Ishan Jha</em>, Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
+                    <div class="periodical">California Institute of Technology, Kavli Nanoscience Institute, May 2025</div>
+                    <div class="links">
+                        <a class="btn" href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank">poster</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="title">AI For Education and Training</div>
+                    <div class="author"><em class="self">Ishan Jha</em>, Others</div>
+                    <div class="periodical">Orange County Department of Education, Future Leaders AI Conference, Nov 2024</div>
+                    <div class="links">
+                        <a class="btn" href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank">slides</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="title">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom</div>
+                    <div class="author"><em class="self">Ishan Jha</em>, Gabriel Codina, Alice Dong, Kristal Hong</div>
+                    <div class="periodical">TechConnect World Innovation Conference, XRAI Symposium, Jun 2024</div>
+                    <div class="links">
+                        <a class="btn" href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">poster</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="title">Digital Twins for Semiconductor Fabrication Education</div>
+                    <div class="author"><em class="self">Ishan Jha</em>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
+                    <div class="periodical">California Institute of Technology, Kavli Nanoscience Institute, May 2024</div>
+                    <div class="links">
+                        <a class="btn" href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">poster</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="title">Empowering Students Through AI Clubs</div>
+                    <div class="author"><em class="self">Ishan Jha</em></div>
+                    <div class="periodical">Orange County Department of Education, Student AI Convening, May 2024</div>
+                    <div class="links">
+                        <a class="btn" href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank">slides</a>
+                        <a class="btn" href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank">video</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            &copy; Copyright 2026 Ishan Jha.
+        </footer>
+
     </div>
-
-    <!-- NEWS SECTION -->
-    <div id="news">
-        <h2>Recent Highlights</h2>
-        <div class="news-list">
-            <div class="news-item">
-                <div class="news-date">Jun 2026</div>
-                <div class="news-content">Presented our 1st place winning orbital space settlement design <a href="https://drive.google.com/file/d/1yrLhhtL4hJG6lbQ-jq8W8Y3J7CUIvzwR/view?usp=sharing" target="_blank">Ad Astra</a> at the <a href="https://nss.org/nss-space-settlement-contest" target="_blank">International Space Development Conference</a>!</div>
-            </div>
-            <div class="news-item">
-                <div class="news-date">Apr 2026</div>
-                <div class="news-content"><b>Gradient Entropy Regularization</b> has been accepted as a poster presentation at the SIAM <a href="https://www.socams.org/" target="_blank">Southern California Applied Mathematics Symposium</a> at LMU.</div>
-            </div>        
-            <div class="news-item">
-                <div class="news-date">Mar 2026</div>
-                <div class="news-content">My project <b>Gradient Entropy Regularization for Physics-Constrained Solving of Partial Differential Equations</b> won 3rd Place in Mathematics at the <a href="https://ocsef.org/fair/awards" target="_blank">Orange County Science and Engineering Fair</a>!</div>
-            </div>
-            <div class="news-item">
-                <div class="news-date">Mar 2026</div>
-                <div class="news-content">Our latest <a href="https://zenodo.org/records/19241366" target="_blank">paper</a> has been accepted to JATE.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- RESEARCH SECTION -->
-    <div id="research">
-        <h2>Research Interests</h2>
-        
-        <div class="item-row">
-            <div class="item-image"><img src="rollout_animation.gif" alt="Visualization for Physics-Informed ML research"></div>
-            <div class="item-content">
-                <div class="item-title">Using AI to simulate physical problems</div>
-                <div class="item-abstract">Working with physics-informed neural networks and neural operators to solve problems across physics and engineering, and improving existing methods.</div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-image"><img src="Paper2.png" alt="Simulation view for Digital Twin project"></div>
-            <div class="item-content">
-                <div class="item-title">Digital Twins for Modelling Manufacturing and Industrial Processes</div>
-                <div class="item-abstract">Using digital twin technologies, integrated into VR platforms, to support, train and develop advanced microfabrication industries. Building a community of American universities to implement DT/AI methodology.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PUBLICATIONS SECTION -->
-    <div id="publications">
-        <h2>Publications</h2>
-
-        <div class="item-row">
-            <div class="item-image"><img src="snip.JPG" alt="Paper Thumbnail"></div>
-            <div class="item-content">
-                <!-- Title wrapped in <a> tag to match the blue linked title format exactly -->
-                <div class="item-title"><a href="https://zenodo.org/records/19241366" target="_blank">A Multi-Institutional Digital Twin and AI Educational Platform for Advanced Microelectronics Fabrication and Device Packaging Training</a></div>
-                <div class="item-authors">Kristal Hong, <span class="author-highlight">Ishan Jha</span>, Abubaker Ahmadi, Peter Stout, G.P. Li, Bert Harrop, Alex Norman</div>
-                <div class="item-venue">Journal of Advanced Technological Education, <span class="date">2026</span></div>
-                <div class="item-links">
-                    <a href="https://zenodo.org/records/19241366" target="_blank">paper</a> / 
-                    <a href="https://ishanyjha.github.io/dtai.html" target="_blank">project page</a>
-                </div>
-               
-            </div>
-        </div>
-        
-        <div class="item-row">
-            <div class="item-image"><img src="Visual1.png" alt="Paper Thumbnail"></div>
-            <div class="item-content">
-                <!-- Title wrapped in <a> tag to match the blue linked title format exactly -->
-                <div class="item-title"><a href="https://zenodo.org/records/14933891" target="_blank">AI-Powered VR Simulations for Semiconductor Industry Training and Education</a></div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Alexis Rodriguez, Felicia Chen, Jocelyn Zhu, G.P. Li</div>
-                <div class="item-venue">Journal of Advanced Technological Education, <span class="date">2024</span></div>
-                <div class="item-links">
-                    <a href="https://zenodo.org/records/14933891" target="_blank">paper</a> / 
-                    <a href="https://www.youtube.com/watch?v=Ri-jqU0WzQM&t=5s" target="_blank">video</a> / 
-                    <a href="https://www.nsf.gov/news/sparking-curiosity-future-semiconductor-workforce" target="_blank">nsf feature</a> / 
-                    <a href="https://launch.siminsights.com?s=f70bd167-3f04-4f28-8339-7ff5fab28807" target="_blank">launch</a>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-
-    <!-- PRESENTATIONS SECTION -->
-    <div id="presentations">
-        <h2>Presentations & Talks</h2>
-
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">Maximum Entropy Regularization for Gradient Pathology Mitigation in Physics-Informed Neural PDE Solvers</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span></div>
-                <div class="item-venue">Society for Industrial and Applied Mathematics — Applied Mathematics Symposium, <span class="date">Jun 2025</span></div>
-                <div class="item-links">
-                    <a href="https://www.socams.org/schedule" target="_blank">abstract</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">Virtualizing Real World Learning Experiences with Digital Twins</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, K. Hong, N. Vatanshenas, A. Ashcroft, A. Ahmadi, R. Almache, R. Dhar, H. Mandadi, R.D. Melara, J.J. Mosquera, P.K. Stout, B. Harrop, S. Wu</div>
-                <div class="item-venue">TechConnect Word Conference — AI for Modelling & Simulation Symposium, <span class="date">Jun 2025</span></div>
-                <div class="item-links">
-                    <a href="https://princeton.edu" target="_blank">poster</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">Agentic AI-embedded Digital Twins for Semiconductor Manufacturing Education</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Kristal Hong, Nick Vatanshenas, Adam Ashcroft</div>
-                <div class="item-venue">California Institute of Technology — Kavli Nanoscience Institute, <span class="date">May 2025</span></div>
-                <div class="item-links">
-                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/b8a08e5515cd70a42ba76ed5155820049a36e841/Poster%20for%20Caltech%202025.pdf" target="_blank">poster</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">AI For Education and Training</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Others</div>
-                <div class="item-venue">Orange County Department of Education — Future Leaders AI Conference, <span class="date">Nov 2024</span></div>
-                <div class="item-links">
-                    <a href="https://docs.google.com/presentation/d/1trymELfKDnHdj340TnMqMLKF8STPKpN9xWVmITHn03Y/edit?usp=sharing" target="_blank">slides</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">Student Centered Undergraduate Research Experiences in Creating Virtual Digital Twin Cleanroom</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong</div>
-                <div class="item-venue">TechConnect World Innovation Conference — XRAI Symposium, <span class="date">Jun 2024</span></div>
-                <div class="item-links">
-                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">poster</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">Digital Twins for Semiconductor Fabrication Education</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span>, Gabriel Codina, Alice Dong, Kristal Hong, Felicia Chen</div>
-                <div class="item-venue">California Institute of Technology — Kavli Nanoscience Institute, <span class="date">May 2024</span></div>
-                <div class="item-links">
-                    <a href="https://github.com/Ishanyjha/ishanyjha.github.io/blob/2c21d5897545eb75615c337f28bb3d09b966de41/UCI%20START%20Academic%20Poster%20(1).pdf" target="_blank">poster</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-content">
-                <div class="item-title">Empowering Students Through AI Clubs</div>
-                <div class="item-authors"><span class="author-highlight">Ishan Jha</span></div>
-                <div class="item-venue">Orange County Department of Education — Student AI Convening, <span class="date">May 2024</span></div>
-                <div class="item-links">
-                    <a href="https://docs.google.com/presentation/d/1hj7_zbnqVg7TAxt5kjAVCEwvPyUrD_DBp5Ijl_JvQo8/edit?usp=sharing" target="_blank">slides</a> / 
-                    <a href="https://www.youtube.com/watch?v=NugQOMaJuuw" target="_blank">video</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>Copyright &copy; 2026 Ishan Jha</p>
-    </footer>
 
 </body>
 </html>
